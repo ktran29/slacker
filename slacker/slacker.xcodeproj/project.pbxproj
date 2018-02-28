@@ -12,6 +12,11 @@
 		65F53D212047477B00C2B1BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F53D1F2047477B00C2B1BF /* Main.storyboard */; };
 		65F53D232047477B00C2B1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F53D222047477B00C2B1BF /* Assets.xcassets */; };
 		65F53D262047477B00C2B1BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F53D242047477B00C2B1BF /* LaunchScreen.storyboard */; };
+		65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D2F20474F3100C2B1BF /* AboutViewController.swift */; };
+		65F53D3220474F7800C2B1BF /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D3120474F7800C2B1BF /* WorkoutViewController.swift */; };
+		65F53D3420474F8300C2B1BF /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D3320474F8300C2B1BF /* TimerViewController.swift */; };
+		65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D3520474F8A00C2B1BF /* BreakViewController.swift */; };
+		65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D372047527700C2B1BF /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		65F53D222047477B00C2B1BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F53D252047477B00C2B1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65F53D272047477B00C2B1BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65F53D2F20474F3100C2B1BF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		65F53D3120474F7800C2B1BF /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		65F53D3320474F8300C2B1BF /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		65F53D3520474F8A00C2B1BF /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		65F53D372047527700C2B1BF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +64,14 @@
 		65F53D1A2047477B00C2B1BF /* slacker */ = {
 			isa = PBXGroup;
 			children = (
+				65F53D1F2047477B00C2B1BF /* Main.storyboard */,
+				65F53D372047527700C2B1BF /* TableViewCell.swift */,
+				65F53D2F20474F3100C2B1BF /* AboutViewController.swift */,
 				65F53D1B2047477B00C2B1BF /* AppDelegate.swift */,
 				65F53D1D2047477B00C2B1BF /* ViewController.swift */,
-				65F53D1F2047477B00C2B1BF /* Main.storyboard */,
+				65F53D3120474F7800C2B1BF /* WorkoutViewController.swift */,
+				65F53D3320474F8300C2B1BF /* TimerViewController.swift */,
+				65F53D3520474F8A00C2B1BF /* BreakViewController.swift */,
 				65F53D222047477B00C2B1BF /* Assets.xcassets */,
 				65F53D242047477B00C2B1BF /* LaunchScreen.storyboard */,
 				65F53D272047477B00C2B1BF /* Info.plist */,
@@ -136,7 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F53D3420474F8300C2B1BF /* TimerViewController.swift in Sources */,
+				65F53D3220474F7800C2B1BF /* WorkoutViewController.swift in Sources */,
+				65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */,
+				65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */,
 				65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */,
+				65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */,
 				65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y6PR999CDT;
 				INFOPLIST_FILE = slacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ateamhasnoname.slacker;
@@ -289,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y6PR999CDT;
 				INFOPLIST_FILE = slacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ateamhasnoname.slacker;
