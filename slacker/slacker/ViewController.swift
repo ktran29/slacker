@@ -11,40 +11,32 @@
  ----------------------- DOCUMENTATION -----------------------
  
  
- print(type(of: data))
- let first_spot = data[0]
+ How to retrieve value in the dictionary:
  let result = (first_spot as AnyObject).value(forKey: "desc")
- print(result)
+
  
  */
-
-
-
 
 
 
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    @IBOutlet weak var tableView: UITableView!
     
+    
+    @IBOutlet weak var tableView: UITableView!
     var ALL_WORKOUTS: NSArray = []
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorStyle = .none
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
+        tableView.rowHeight = 68
         
         downloadData()
-       
-        
-        
-//        print("All workouts:")
-//        print(self.ALL_WORKOUTS)
-//
-//        print("All workouts is this long: \(self.ALL_WORKOUTS.count)")
     }
     
     
@@ -70,12 +62,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // ______________ TABLE ______________
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.ALL_WORKOUTS.count)
         return self.ALL_WORKOUTS.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! TableViewCell
+//        cell.layer.cornerRadius = 7
+//        cell.backgroundColor = UIColor.cyan
+
         
         if self.ALL_WORKOUTS.count > 0 {
             let workout_category = self.ALL_WORKOUTS[indexPath.row]
@@ -84,24 +78,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
             
         }
-        
-        print("Hey, row \(indexPath.row)")
-        print(self.ALL_WORKOUTS.count)
-        print(type(of: self.ALL_WORKOUTS))
-
-        
-        cell.workoutTitle.text = "Curls"
-        cell.workoutDescription.text = "Let's do some curls, maybe like 30 for about half an hour and get some big gains #workoutpowder"
-        
+        // the stuff below is in case ALL_WORKOUTS fails to be initialized and we need a placeholder.
+        // fingers crossed we won't ever have to get here.
+        cell.workoutTitle.text = "Error"
+        cell.workoutDescription.text = "It looks like your tableView function thinks that ALL_WORKOUTS is empty. - Ben W"
         return cell
     }
     
     //cell was clicked on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
+        print("You're trying to go to a workout :)")
         //        performSegue(withIdentifier: "segueToQuestions", sender: nil)
-        //print(self.ALL_WORKOUTS.count)
     }
     
     
@@ -113,27 +100,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // ______________ DOWNLOAD JSON ______________
     
+    // downdloadData helper method.
+    // initializes all workouts with the downloaded json data.
     func initializeAllWorkouts(_  jsonData:NSArray) {
         self.ALL_WORKOUTS = jsonData
-//        print("Here is the all workouts: ")
-//        print(self.ALL_WORKOUTS)
     }
     
+    // Downloads, parses, and setsup all workout data from our website.
     func downloadData() -> Void {
-        
-        //you only want to do this if appData content is empty
-        //            NSURL(string: "https://tednewardsandbox.site44.com/questions.json")
         let urlString = URL(string: "https://con4man.github.io/SlackerJSON/slacker.json")
-        
         if urlString == nil {
             notifyUser("The URL is wrong.")
             return;
         }
-        UserDefaults.standard.set(nil, forKey: "URL")
-        
         let config = URLSessionConfiguration.default
         let session = URLSession.init(configuration: config, delegate: nil, delegateQueue: OperationQueue.current)
-        
         let task = session.dataTask(with: urlString!) { (data, response, error) in
             var jsonData : NSArray = []
             let fileManager = FileManager.default
@@ -163,26 +144,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } else if let error = error {
                 self.notifyUser(error.localizedDescription)
             }
-            
-            
-//            let data = jsonData // DATA IS OF TYPE NSArrayI
-            
-            
-            
             DispatchQueue.main.async {
-                
                 self.initializeAllWorkouts(jsonData)
                 self.tableView.reloadData()
-//                self.ALL_WORKOUTS = jsonData
-                
             }
-            
-
             session.invalidateAndCancel()
         }
-//        print("All workouts is this long: \(self.ALL_WORKOUTS.count)")
         task.resume()
     }//end func
+    
+    
+    
     
     
     
@@ -190,9 +162,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    
 }
-
