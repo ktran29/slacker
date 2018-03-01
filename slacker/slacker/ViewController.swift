@@ -6,12 +6,29 @@
 //  Copyright © 2018 ateamhasnoname. All rights reserved.
 //
 
+
+/*
+ ----------------------- DOCUMENTATION -----------------------
+ 
+ 
+ print(type(of: data))
+ let first_spot = data[0]
+ let result = (first_spot as AnyObject).value(forKey: "desc")
+ print(result)
+ 
+ */
+
+
+
+
+
+
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
-    var ALL_WORKOUTS: NSArrayI = []
+    var ALL_WORKOUTS: NSArray = []
     
     
     
@@ -20,8 +37,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         
-        //        getJsonFromUrl()
         downloadData()
+       
+        
+        
+//        print("All workouts:")
+//        print(self.ALL_WORKOUTS)
+//
+//        print("All workouts is this long: \(self.ALL_WORKOUTS.count)")
     }
     
     
@@ -47,11 +70,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // ______________ TABLE ______________
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        print(self.ALL_WORKOUTS.count)
+        return self.ALL_WORKOUTS.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! TableViewCell
+        
+        if self.ALL_WORKOUTS.count > 0 {
+            let workout_category = self.ALL_WORKOUTS[indexPath.row]
+            cell.workoutTitle.text =  (workout_category as AnyObject).value(forKey: "workout") as? String
+            cell.workoutDescription.text =  (workout_category as AnyObject).value(forKey: "desc") as? String
+            return cell
+            
+        }
+        
+        print("Hey, row \(indexPath.row)")
+        print(self.ALL_WORKOUTS.count)
+        print(type(of: self.ALL_WORKOUTS))
+
+        
         cell.workoutTitle.text = "Curls"
         cell.workoutDescription.text = "Let's do some curls, maybe like 30 for about half an hour and get some big gains #workoutpowder"
         
@@ -60,12 +98,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //cell was clicked on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let workoutIndex = indexPath
-        //        let workoutName = appdata.quizzes[indexPath.row][0]
-        //        print("We Selected: \(categoryName)")
-        //        currentCategory = categoryName
+        
         
         //        performSegue(withIdentifier: "segueToQuestions", sender: nil)
+        //print(self.ALL_WORKOUTS.count)
     }
     
     
@@ -76,6 +112,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     // ______________ DOWNLOAD JSON ______________
+    
+    func initializeAllWorkouts(_  jsonData:NSArray) {
+        self.ALL_WORKOUTS = jsonData
+//        print("Here is the all workouts: ")
+//        print(self.ALL_WORKOUTS)
+    }
     
     func downloadData() -> Void {
         
@@ -100,12 +142,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let response = response as? HTTPURLResponse {
                 if response.statusCode == 200 {
                     do {
-                        jsonData = (try JSONSerialization.jsonObject(with: data!, options: []) as? NSArray)!
+                        jsonData  = (try JSONSerialization.jsonObject(with: data!, options: []) as? NSArray)!
                         do {
                             try jsonData.write(to: path)
                         } catch {
                             if content != nil {
-                                jsonData = NSArray(contentsOf: path)!
+                                jsonData  = NSArray(contentsOf: path)!
                             }
                         }
                     } catch {
@@ -123,22 +165,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             
-            // ---- Filtering JSON file into an Appdata object
+//            let data = jsonData // DATA IS OF TYPE NSArrayI
             
-            let data = jsonData // DATA IS OF TYPE NSArrayI
-            //                    print(data)
-            print(type(of: data))
-            print(data[0])
             
             
             DispatchQueue.main.async {
+                
+                self.initializeAllWorkouts(jsonData)
                 self.tableView.reloadData()
-                //                        UserDefaults.standard.set(self.appdata.quizzes, forKey: "quizzes")
-                //                        UserDefaults.standard.set(self.appdata.quizQuestions, forKey: "quizQuestions")
+//                self.ALL_WORKOUTS = jsonData
+                
             }
+            
+
             session.invalidateAndCancel()
         }
-        
+//        print("All workouts is this long: \(self.ALL_WORKOUTS.count)")
         task.resume()
     }//end func
     
