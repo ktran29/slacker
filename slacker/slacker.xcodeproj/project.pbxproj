@@ -30,8 +30,8 @@
 		65F53D2F20474F3100C2B1BF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65F53D3520474F8A00C2B1BF /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		65F53D372047527700C2B1BF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		B57E9C002048DE950008F795 /* LiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiftingViewController.swift; path = slacker/LiftingViewController.swift; sourceTree = "<group>"; };
-		B57E9C022048DEA00008F795 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardioViewController.swift; path = slacker/CardioViewController.swift; sourceTree = "<group>"; };
+		B57E9C002048DE950008F795 /* LiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftingViewController.swift; sourceTree = "<group>"; };
+		B57E9C022048DEA00008F795 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +48,6 @@
 		65F53D0F2047477B00C2B1BF = {
 			isa = PBXGroup;
 			children = (
-				B57E9C002048DE950008F795 /* LiftingViewController.swift */,
-				B57E9C022048DEA00008F795 /* CardioViewController.swift */,
 				65F53D1A2047477B00C2B1BF /* slacker */,
 				65F53D192047477B00C2B1BF /* Products */,
 			);
@@ -66,6 +64,8 @@
 		65F53D1A2047477B00C2B1BF /* slacker */ = {
 			isa = PBXGroup;
 			children = (
+				B57E9C002048DE950008F795 /* LiftingViewController.swift */,
+				B57E9C022048DEA00008F795 /* CardioViewController.swift */,
 				65F53D1F2047477B00C2B1BF /* Main.storyboard */,
 				65F53D372047527700C2B1BF /* TableViewCell.swift */,
 				65F53D2F20474F3100C2B1BF /* AboutViewController.swift */,

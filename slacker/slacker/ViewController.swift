@@ -88,7 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //cell was clicked on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You're trying to go to a workout :)")
-        //        performSegue(withIdentifier: "segueToQuestions", sender: nil)
+        performSegue(withIdentifier: "segueToCardio", sender: nil)
     }
     
     
@@ -153,7 +153,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         task.resume()
     }//end func
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToCardio" {
+            let cardioView = segue.destination as! CardioViewController
+        }
+    }
     
     
     
