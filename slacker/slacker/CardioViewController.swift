@@ -1,14 +1,14 @@
 //
-//  TimerViewController.swift
+//  CardioViewController.swift
 //  slacker
 //
-//  Created by Kevin Tran on 2/28/18.
+//  Created by Benjamin Walchenbach on 3/1/18.
 //  Copyright © 2018 ateamhasnoname. All rights reserved.
 //
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class CardioViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,9 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-cX-5uw">
-                                <rect key="frame" x="92" y="87" width="202" height="325"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjy-E3-on9">
+                                <rect key="frame" x="150" y="47" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-cX-5uw">
+                                <rect key="frame" x="38" y="94" width="310" height="468"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWS-WF-PgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-836" y="-530.28485757121439"/>
+            <point key="canvasLocation" x="-2575.1999999999998" y="-828.03598200899557"/>
         </scene>
         <!--Main Scene-->
         <scene sceneID="AAQ-0M-PaZ">
@@ -76,10 +84,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="X3a-Pg-ML5" secondAttribute="trailing" id="6Bq-Ku-yqR"/>
-                                                <constraint firstItem="X3a-Pg-ML5" firstAttribute="leading" secondItem="QdI-fU-qSI" secondAttribute="leading" id="6bq-ZR-2bG"/>
-                                                <constraint firstItem="X3a-Pg-ML5" firstAttribute="top" secondItem="QdI-fU-qSI" secondAttribute="top" id="D8T-1d-9KV"/>
-                                                <constraint firstAttribute="bottom" secondItem="X3a-Pg-ML5" secondAttribute="bottom" id="tvy-K3-UUW"/>
+                                                <constraint firstItem="X3a-Pg-ML5" firstAttribute="leading" secondItem="QdI-fU-qSI" secondAttribute="leading" id="50N-vw-vNh"/>
+                                                <constraint firstAttribute="bottom" secondItem="X3a-Pg-ML5" secondAttribute="bottom" id="MNL-o2-yTR"/>
+                                                <constraint firstItem="X3a-Pg-ML5" firstAttribute="top" secondItem="QdI-fU-qSI" secondAttribute="top" id="NwM-rz-x6z"/>
+                                                <constraint firstAttribute="trailing" secondItem="X3a-Pg-ML5" secondAttribute="trailing" id="eis-Ur-rUx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -106,7 +114,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoZ-pK-yJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-836" y="-1194.1529235382309"/>
+            <point key="canvasLocation" x="-1025" y="-828"/>
+        </scene>
+        <!--Lifting Scene-->
+        <scene sceneID="brE-kD-Is3">
+            <objects>
+                <viewController title="Lifting Scene" id="CeU-zo-bhL" customClass="LiftingViewController" customModule="slacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dOb-Mu-ka5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hA6-SV-p8B"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJ1-b5-i7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-1261"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yw5-kn-bDR">
@@ -126,35 +149,20 @@
             </objects>
             <point key="canvasLocation" x="-1812" y="-828"/>
         </scene>
-        <!--Workout Scene-->
-        <scene sceneID="lNW-Ee-Ust">
+        <!--Cardio Scene-->
+        <scene sceneID="AHn-9T-ksn">
             <objects>
-                <viewController title="Workout Scene" id="HfX-V1-PxU" customClass="WorkoutViewController" customModule="slacker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L1o-ah-6iu">
+                <viewController title="Cardio Scene" id="fjS-M1-qgK" customClass="CardioViewController" customModule="slacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UIp-LR-cgw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Y8r-Yo-v5N"/>
+                        <viewLayoutGuide key="safeArea" id="Foq-PO-ufy"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m2r-N9-yoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VxY-AT-ltb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="-918"/>
-        </scene>
-        <!--Timer Scene-->
-        <scene sceneID="C68-MW-IDi">
-            <objects>
-                <viewController title="Timer Scene" id="Z7c-iW-bag" customClass="TimerViewController" customModule="slacker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="boJ-Ob-PvI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="esm-hh-IZ4"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KM2-gV-C69" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="377" y="-141"/>
+            <point key="canvasLocation" x="4" y="-475"/>
         </scene>
         <!--Break Scene-->
         <scene sceneID="FLr-4d-wo0">
@@ -169,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mx6-U4-GBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="-669"/>
+            <point key="canvasLocation" x="854" y="-799"/>
         </scene>
     </scenes>
 </document>
