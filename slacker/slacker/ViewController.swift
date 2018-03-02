@@ -27,8 +27,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var ALL_WORKOUTS: NSArray = []
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = .none
@@ -87,8 +85,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //cell was clicked on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You're trying to go to a workout :)")
-        //        performSegue(withIdentifier: "segueToQuestions", sender: nil)
+        let workoutView = self.storyboard?.instantiateViewController(withIdentifier: "WorkoutView") as! WorkoutViewController
+        let selectedWorkout = ALL_WORKOUTS[indexPath.row] as AnyObject
+        workoutView.workoutTitle = selectedWorkout.value(forKey: "workout") as? String
+        workoutView.workoutDescription = selectedWorkout.value(forKey: "desc") as? String
+        workoutView.exercises = selectedWorkout.value(forKey: "exercises") as? NSArray
+        
+        self.navigationController?.pushViewController(workoutView, animated: true)
     }
     
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65A2CBF12048E3FE005AA5E0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */; };
+		65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */; };
 		65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D1B2047477B00C2B1BF /* AppDelegate.swift */; };
 		65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D1D2047477B00C2B1BF /* ViewController.swift */; };
 		65F53D212047477B00C2B1BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F53D1F2047477B00C2B1BF /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = slacker/WorkoutViewController.swift; sourceTree = "<group>"; };
+		65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		65F53D182047477B00C2B1BF /* slacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F53D1B2047477B00C2B1BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65F53D1D2047477B00C2B1BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +52,10 @@
 		65F53D0F2047477B00C2B1BF = {
 			isa = PBXGroup;
 			children = (
+				65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */,
 				B57E9C002048DE950008F795 /* LiftingViewController.swift */,
 				B57E9C022048DEA00008F795 /* CardioViewController.swift */,
+				65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */,
 				65F53D1A2047477B00C2B1BF /* slacker */,
 				65F53D192047477B00C2B1BF /* Products */,
 			);
@@ -151,11 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A2CBF12048E3FE005AA5E0 /* WorkoutViewController.swift in Sources */,
 				B57E9C012048DE950008F795 /* LiftingViewController.swift in Sources */,
 				65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */,
 				65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */,
 				65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */,
 				65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */,
+				65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */,
 				B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */,
 				65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */,
 			);
