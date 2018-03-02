@@ -10,9 +10,30 @@ import UIKit
 
 class BreakViewController: UIViewController {
 
+    var seconds = 15
+    
+    var timer = Timer()
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(BreakViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        seconds -= 1     //This will decrement(count down)the seconds.
+        timerLabel.text = "\(seconds)"  //This will update the label.
+        if (seconds == 0) {
+            timer.invalidate()
+            timerLabel.text = "Done!"
+            performSegue(withIdentifier: "toLifting", sender: self)//transition to exercise
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        runTimer()
+        
         // Do any additional setup after loading the view.
     }
 

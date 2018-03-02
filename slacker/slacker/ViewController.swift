@@ -27,6 +27,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var ALL_WORKOUTS: NSArray = []
     
+    @IBAction func toBreak(_ sender: Any) {
+        performSegue(withIdentifier: "toBreak", sender: self)
+
+    }
+    
     
     
     override func viewDidLoad() {
