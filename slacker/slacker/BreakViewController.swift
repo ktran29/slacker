@@ -14,6 +14,14 @@ class BreakViewController: UIViewController {
     
     var timer = Timer()
     
+    var workoutType = ""
+    
+    var index = 100
+    
+    var exercises: NSArray = []
+    
+    var set = 100
+    
     @IBOutlet weak var timerLabel: UILabel!
     
     func runTimer() {
@@ -26,7 +34,11 @@ class BreakViewController: UIViewController {
         if (seconds == 0) {
             timer.invalidate()
             timerLabel.text = "Done!"
-            performSegue(withIdentifier: "toLifting", sender: self)//transition to exercise
+            if (workoutType == "lift") {
+                performSegue(withIdentifier: "toLifting", sender: self) //transition to lift screen
+            } else {
+                performSegue(withIdentifier: "toCardio", sender: self) //transition to cardio
+            }
         }
     }
     

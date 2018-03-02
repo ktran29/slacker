@@ -195,6 +195,7 @@
                     <connections>
                         <outlet property="timerLabel" destination="4Jm-UW-cSM" id="xfW-aY-Jv6"/>
                         <segue destination="CeU-zo-bhL" kind="show" identifier="toLifting" id="rgb-Ec-82R"/>
+                        <segue destination="fjS-M1-qgK" kind="show" id="N4w-su-GiH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mx6-U4-GBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
