@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="7" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="51" id="0n1-wb-LKs" customClass="TableViewCell" customModule="slacker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="7" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="51" id="0n1-wb-LKs" customClass="TableViewCell" customModule="slacker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0n1-wb-LKs" id="QdI-fU-qSI">
@@ -149,7 +149,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" id="SEH-xS-vQi" customClass="ExerciseTableViewCell" customModule="slacker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" id="SEH-xS-vQi" customClass="ExerciseTableViewCell" customModule="slacker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SEH-xS-vQi" id="Ocx-ow-9Wv">
@@ -157,7 +157,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excercise Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-cB-hUh">
-                                                    <rect key="frame" x="15" y="11" width="53" height="22"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -193,6 +193,7 @@
                         <outlet property="tableView" destination="CV0-sL-8Ro" id="qYX-2b-3Ji"/>
                         <outlet property="workoutDesc" destination="pvq-td-HEC" id="4U0-kL-fJg"/>
                         <segue destination="CeU-zo-bhL" kind="show" identifier="overviewToLifting" id="ZWs-On-41p"/>
+                        <segue destination="fjS-M1-qgK" kind="show" identifier="overviewToCardio" id="Hh7-JR-h1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikf-MH-0cx" userLabel="First Responder" sceneMemberID="firstResponder"/>

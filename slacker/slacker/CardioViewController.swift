@@ -9,7 +9,14 @@
 import UIKit
 
 class CardioViewController: UIViewController {
-
+    
+    
+    
+    // CONNOR I added this variable, all the exercises are here
+    var exercises: NSArray = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -44,7 +44,8 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         } else {
             // move to cardio scene ______________
-            
+            self.nextSegue = "CardioViewController"
+            performSegue(withIdentifier: "overviewToCardio", sender: CardioViewController.self)
         }
     }
     
@@ -53,8 +54,12 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             let destination = segue.destination as! LiftingViewController
             destination.exercises = (self.exercises)!
             print("Seguing to LiftViewController --------")
-        } else {
-            // CONNOR ---- Segue to cardio page here
+            
+        } else if self.nextSegue == "CardioViewController"{
+            // CONNOR ---- choose what data to pass over here
+            let destination = segue.destination as! CardioViewController
+            destination.exercises = (self.exercises)!
+            print("Seguing to CardioViewController --------")
         }
         
     }

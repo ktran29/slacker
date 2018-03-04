@@ -54,7 +54,9 @@ class LiftingViewController: UIViewController {
     
     // ------------------ Functions ------------------
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print( "\(segue) is my Segue -------")
+    }
     
     // perform segue to the break scene
     func moveToBreak() {
@@ -63,6 +65,7 @@ class LiftingViewController: UIViewController {
         // workout time, rest time, exercises
         // changeMySets:bool , sets __you don't want to change sets if you finished a workout__
         // exercise index
+        performSegue(withIdentifier: "liftingToBreak", sender: LiftingViewController.self)
     }
     
     
