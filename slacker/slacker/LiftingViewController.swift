@@ -68,8 +68,6 @@ class LiftingViewController: UIViewController {
     }
     
     
-    
-    
     func prepareViewController() -> Void {
         self.exerciseTitle.text = ((exercises[exerciseIndex]) as AnyObject).value(forKey: "name") as? String
         self.exDescription.text = ((exercises[exerciseIndex]) as AnyObject).value(forKey: "desc") as? String
