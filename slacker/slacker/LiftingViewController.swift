@@ -23,9 +23,7 @@ class LiftingViewController: UIViewController {
     }
     
     
-    
-    
-    
+
     
     // has to be received and sent
     var exercises: NSArray = []
@@ -74,6 +72,9 @@ class LiftingViewController: UIViewController {
         self.totalSets = (((exercises[exerciseIndex]) as AnyObject).value(forKey: "sets") as? Int)!
         self.reps = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "reps")) as? Int)!
         self.restTime = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "rest")) as? Int)!
+        
+        self.setXofY.text = "Set \(self.sets) of \(self.totalSets)     | "
+        self.repsLabel.text = "\(self.reps) Reps"
     }
     
     func nextExercise() {

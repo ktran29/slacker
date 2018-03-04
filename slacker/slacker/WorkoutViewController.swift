@@ -19,6 +19,10 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     var workoutDescription : String?
     var exercises : NSArray?
     
+    // this will be modified by clickedBegin and used
+    // to determine where to go next
+    var nextSegue: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -27,7 +31,34 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         name.text = workoutTitle!
         workoutDesc.text = workoutDescription!
     }
-
+    
+    
+    @IBAction func clickedBegin(_ sender: UIButton) {
+        let restTime = (self.exercises![0] as AnyObject).value(forKey: "rest")
+        
+        if restTime as? Int == 0 {
+            // move to lifting scene
+            self.nextSegue = "LiftingViewController"
+            performSegue(withIdentifier: "overviewToLifting", sender: WorkoutViewController.self)
+            
+        
+        } else {
+            // move to cardio scene ______________
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if self.nextSegue == "LiftingViewController" {
+            let destination = segue.destination as! LiftingViewController
+            destination.exercises = (self.exercises)!
+            print("Seguing to LiftViewController --------")
+        } else {
+            // CONNOR ---- Segue to cardio page here
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

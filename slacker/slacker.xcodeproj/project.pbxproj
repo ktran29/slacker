@@ -17,6 +17,7 @@
 		65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D2F20474F3100C2B1BF /* AboutViewController.swift */; };
 		65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D3520474F8A00C2B1BF /* BreakViewController.swift */; };
 		65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D372047527700C2B1BF /* TableViewCell.swift */; };
+		B55BB7B6204B9E2400F5AE95 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */; };
 		B57E9C012048DE950008F795 /* LiftingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C002048DE950008F795 /* LiftingViewController.swift */; };
 		B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C022048DEA00008F795 /* CardioViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		65F53D2F20474F3100C2B1BF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65F53D3520474F8A00C2B1BF /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		65F53D372047527700C2B1BF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		B57E9C002048DE950008F795 /* LiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiftingViewController.swift; path = slacker/LiftingViewController.swift; sourceTree = "<group>"; };
 		B57E9C022048DEA00008F795 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardioViewController.swift; path = slacker/CardioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				65F53D1F2047477B00C2B1BF /* Main.storyboard */,
+				B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */,
 				65F53D372047527700C2B1BF /* TableViewCell.swift */,
 				65F53D2F20474F3100C2B1BF /* AboutViewController.swift */,
 				65F53D1B2047477B00C2B1BF /* AppDelegate.swift */,
@@ -162,6 +165,7 @@
 				65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */,
 				65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */,
 				65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */,
+				B55BB7B6204B9E2400F5AE95 /* CongratsViewController.swift in Sources */,
 				65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */,
 				65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */,
 				B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */,
