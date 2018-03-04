@@ -95,6 +95,7 @@ class LiftingViewController: UIViewController {
             if self.exerciseIndex >= self.exercises.count - 1 {
                 self.exerciseTitle.text = "WORKOUT DONE"
                 // Trasnition to Congrats page ____________
+                performSegue(withIdentifier: "liftToCongrats", sender: LiftingViewController.self)
             
             // move on to next exercise
             } else {

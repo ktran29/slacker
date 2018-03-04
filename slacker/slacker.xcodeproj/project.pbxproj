@@ -18,6 +18,7 @@
 		65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D3520474F8A00C2B1BF /* BreakViewController.swift */; };
 		65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D372047527700C2B1BF /* TableViewCell.swift */; };
 		B55BB7B6204B9E2400F5AE95 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */; };
+		B55BB7B8204B9F1100F5AE95 /* WORKOUT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */; };
 		B57E9C012048DE950008F795 /* LiftingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C002048DE950008F795 /* LiftingViewController.swift */; };
 		B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C022048DEA00008F795 /* CardioViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		65F53D3520474F8A00C2B1BF /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		65F53D372047527700C2B1BF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+		B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WORKOUT.jpg; sourceTree = "<group>"; };
 		B57E9C002048DE950008F795 /* LiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiftingViewController.swift; path = slacker/LiftingViewController.swift; sourceTree = "<group>"; };
 		B57E9C022048DEA00008F795 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardioViewController.swift; path = slacker/CardioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				65F53D1B2047477B00C2B1BF /* AppDelegate.swift */,
 				65F53D1D2047477B00C2B1BF /* ViewController.swift */,
 				65F53D3520474F8A00C2B1BF /* BreakViewController.swift */,
+				B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */,
 				65F53D222047477B00C2B1BF /* Assets.xcassets */,
 				65F53D242047477B00C2B1BF /* LaunchScreen.storyboard */,
 				65F53D272047477B00C2B1BF /* Info.plist */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F53D262047477B00C2B1BF /* LaunchScreen.storyboard in Resources */,
+				B55BB7B8204B9F1100F5AE95 /* WORKOUT.jpg in Resources */,
 				65F53D232047477B00C2B1BF /* Assets.xcassets in Resources */,
 				65F53D212047477B00C2B1BF /* Main.storyboard in Resources */,
 			);

@@ -275,6 +275,7 @@
                         <outlet property="repsLabel" destination="0kd-ra-YFk" id="aiX-ZS-OS5"/>
                         <outlet property="setXofY" destination="GDF-aW-4tv" id="9MZ-zr-rSM"/>
                         <segue destination="i3u-6V-o9H" kind="show" identifier="liftingToBreak" id="dxd-KF-dZd"/>
+                        <segue destination="RuX-jB-heU" kind="show" identifier="liftToCongrats" id="tEQ-Id-aC9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJ1-b5-i7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbL-fG-btT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2302" y="-389"/>
+            <point key="canvasLocation" x="2301.5999999999999" y="-389.05547226386807"/>
         </scene>
         <!--Workouts-->
         <scene sceneID="22b-4U-8Zf">
