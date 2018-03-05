@@ -79,8 +79,19 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         let exerciseName = singleExercise.value(forKey: "name") as! String
         let numSets = singleExercise.value(forKey: "sets") as! Int
         let numReps = singleExercise.value(forKey: "reps") as! Int
-        cell.exerciseInfo.text = "\(exerciseName), \(numSets) sets, \(numReps) reps"
-
+        var setText = ""
+        var repText = ""
+        if numSets == 1 {
+            setText = "set"
+        } else {
+            setText = "sets"
+        }
+        if numReps == 1 {
+            repText = "rep"
+        } else {
+            repText = "reps"
+        }
+        cell.exerciseInfo.text = "\(exerciseName), \(numSets) \(setText), \(numReps) \(repText)"
         return cell
     }
     
