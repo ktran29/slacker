@@ -387,13 +387,27 @@
                     <view key="view" contentMode="scaleToFill" id="5V0-rv-y9h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-XG-Q5m">
+                                <rect key="frame" x="16" y="107" width="343" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YWb-mv-WXh"/>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="eVc-XG-Q5m" id="RYd-lL-nPZ"/>
+                        <segue destination="fjS-M1-qgK" kind="show" identifier="toCardio" id="y8U-xA-O9G"/>
+                        <segue destination="CeU-zo-bhL" kind="show" identifier="toLifting" id="uVm-YY-rVk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mx6-U4-GBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="-1145"/>
+            <point key="canvasLocation" x="1304.8" y="-1146.4767616191905"/>
         </scene>
         <!--Congrats Scene-->
         <scene sceneID="mwr-cg-iKH">
@@ -430,4 +444,8 @@
             <point key="canvasLocation" x="-2596" y="-931"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y8U-xA-O9G"/>
+        <segue reference="uVm-YY-rVk"/>
+    </inferredMetricsTieBreakers>
 </document>
