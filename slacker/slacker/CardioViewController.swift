@@ -12,7 +12,6 @@ class CardioViewController: UIViewController {
     // local variables
     var exTime: Int = 1
     var timer = Timer()
-    //var isPaused = false
     
     // has to be received and sent
     var exercises: NSArray = []
@@ -21,13 +20,12 @@ class CardioViewController: UIViewController {
     
     // only sent
     var restTime: Int = 99999
+    var workoutType = "cardio"
+    var changeMySets = true
     
     // re-calculated on view did load
     var totalSets: Int = 0
     var reps: Int = 0
-    
-    var workoutType = "cardio"
-    var changeMySets = true
     
     @IBOutlet weak var setXofY: UILabel!
     @IBOutlet weak var exerciseTitle: UILabel!
@@ -65,6 +63,7 @@ class CardioViewController: UIViewController {
         }
     }
     
+    // sets content (labels, timer, buttons) of the scene
     func prepareViewController() -> Void {
         self.exerciseTitle.text = ((exercises[exerciseIndex]) as AnyObject).value(forKey: "name") as? String
         self.exDescription.text = ((exercises[exerciseIndex]) as AnyObject).value(forKey: "desc") as? String
@@ -72,13 +71,14 @@ class CardioViewController: UIViewController {
         timerLabel.text = timeString(time: TimeInterval(exTime))
         pauseBtn.isEnabled = false
         self.totalSets = (((exercises[exerciseIndex]) as AnyObject).value(forKey: "sets") as? Int)!
-//        self.reps = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "reps")) as? Int)!
         self.restTime = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "rest")) as? Int)!
-        
         self.setXofY.text = "Set \(self.sets) of \(self.totalSets)"
+//        Are these needed? Maybe for abs or something between running exercises?
+//        self.reps = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "reps")) as? Int)!
 //        self.repsLabel.text = "\(self.reps) Reps"
     }
     
+    // puts the duration of seconds into a HH/MM/SS format
     func timeString(time:TimeInterval) -> String {
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
@@ -86,42 +86,41 @@ class CardioViewController: UIViewController {
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
+    // resets the set count
     func nextExercise() {
         self.sets = 0
     }
     
     
     @IBAction func clickedNext(_ sender: UIButton) {
-        
-        // rest time that needs to be sent over
-        
+       
         // done with this exercise
         if self.sets >= totalSets {
             self.changeMySets = false
+            
             //check if entire workout is done
             if self.exerciseIndex >= self.exercises.count - 1 {
                 self.exerciseTitle.text = "WORKOUT DONE"
-                // Trasnition to Congrats page ____________
+                // Transition to Congrats page ____________
                 performSegue(withIdentifier: "cardioToCongrats", sender: CardioViewController.self)
                 
                 // move on to next exercise
             } else {
                 rotateToNewExercise()
             }
-            
-            
-            // not done with this exercise, break or next set
+
+        // not done with this exercise, break or next set
         } else {
             self.changeMySets = true
             self.sets += 1
         }
-        
         prepareViewController()
         if iNeedaBreak() {
             performSegue(withIdentifier: "cardioToBreak", sender: CardioViewController.self)
         }
     }
     
+    // increments the exercise index
     func rotateToNewExercise() {
         self.exerciseIndex += 1
         self.sets = 1
@@ -137,7 +136,6 @@ class CardioViewController: UIViewController {
         super.viewDidLoad()
         prepareViewController()
         //runTimer()  // Enable this to have the timer start onLoad
-        
         // Do any additional setup after loading the view.
     }
     
@@ -146,17 +144,20 @@ class CardioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // passes over data to other scenes
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "cardioToBreak" {
             print("I am moving to a break view controller ") // --------------
-            let breakView = segue.destination as! BreakViewController
-            // pass:
-            // workout time, rest time, exercises
+            let destination = segue.destination as! BreakViewController
             // changeMySets:bool , sets __you don't want to change sets if you finished a workout__
-            // exercise index
+            destination.workoutType = (self.workoutType)
+            destination.exercises = (self.exercises)
+            destination.exerciseIndex = (self.exerciseIndex)
+            destination.sets = (self.sets)
+            destination.restTime = (self.restTime)
         } else if segue.identifier == "cardioToCongrats" {
             print("I am moving to a congrats view controller ") // --------------
-            let congratsView = segue.destination as! CongratsViewController
+            let destination = segue.destination as! CongratsViewController
         } else {
             print("No segue was identified")
         }

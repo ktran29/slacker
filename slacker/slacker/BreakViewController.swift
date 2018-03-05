@@ -10,17 +10,17 @@ import UIKit
 
 class BreakViewController: UIViewController {
     
-    var seconds = 15
-    
+    // local variables
     var timer = Timer()
     
+    // has to be received
+    var restTime: Int = 1
     var workoutType = ""
     
-    var index = 100
-    
+    // has to be received and sent
     var exercises: NSArray = []
-    
-    var set = 100
+    var exerciseIndex: Int = 0
+    var sets: Int = 1
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -29,21 +29,47 @@ class BreakViewController: UIViewController {
     }
     
     @objc func updateTimer() {
-        seconds -= 1     //This will decrement(count down)the seconds.
-        timerLabel.text = "\(seconds)"  //This will update the label.
-        if (seconds == 0) {
+        restTime -= 1     //This will decrement(count down)the seconds.
+        timerLabel.text = timeString(time: TimeInterval(restTime))  //This will update the label.
+        if (restTime == 0) {
             timer.invalidate()
             timerLabel.text = "Done!"
             if (workoutType == "lift") {
-                performSegue(withIdentifier: "toLifting", sender: self) //transition to lift screen
-            } else {
-                performSegue(withIdentifier: "toCardio", sender: self) //transition to cardio
+                performSegue(withIdentifier: "breatToLifting", sender: self) //transition to lift screen
+            } else if (workoutType == "cardio") {
+                performSegue(withIdentifier: "breakToCardio", sender: self) //transition to cardio
             }
+        }
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "breakToLifting" {
+            print("I am moving to a lifting view controller ") // --------------
+            let destination = segue.destination as! LiftingViewController
+            destination.exercises = (self.exercises)
+            destination.exerciseIndex = (self.exerciseIndex)
+            destination.sets = (self.sets)
+        } else if segue.identifier == "breakToCardio" {
+            print("I am moving to a cardio view controller ") // --------------
+            let destination = segue.destination as! CardioViewController
+            destination.exercises = (self.exercises)
+            destination.exerciseIndex = (self.exerciseIndex)
+            destination.sets = (self.sets)
+        } else {
+            print("No segue was identified")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerLabel.text = timeString(time: TimeInterval(restTime))
         runTimer()
         
         // Do any additional setup after loading the view.

@@ -374,6 +374,8 @@
                         <outlet property="setXofY" destination="blY-8t-fYA" id="3Ni-0W-jBD"/>
                         <outlet property="startBtn" destination="lhJ-tv-FVY" id="48T-2M-D5Q"/>
                         <outlet property="timerLabel" destination="md5-YS-CNz" id="OzP-Xt-fCq"/>
+                        <segue destination="i3u-6V-o9H" kind="show" identifier="cardioToBreak" id="ikY-EC-C5c"/>
+                        <segue destination="RuX-jB-heU" kind="show" identifier="cardioToCongrats" id="iRg-S7-jkb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxY-AT-ltb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,8 +403,8 @@
                     </view>
                     <connections>
                         <outlet property="timerLabel" destination="eVc-XG-Q5m" id="RYd-lL-nPZ"/>
-                        <segue destination="fjS-M1-qgK" kind="show" identifier="toCardio" id="y8U-xA-O9G"/>
-                        <segue destination="CeU-zo-bhL" kind="show" identifier="toLifting" id="uVm-YY-rVk"/>
+                        <segue destination="fjS-M1-qgK" kind="show" identifier="breakToCardio" id="y8U-xA-O9G"/>
+                        <segue destination="CeU-zo-bhL" kind="show" identifier="breakToLifting" id="uVm-YY-rVk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mx6-U4-GBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -445,6 +447,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="iRg-S7-jkb"/>
+        <segue reference="ikY-EC-C5c"/>
         <segue reference="y8U-xA-O9G"/>
         <segue reference="uVm-YY-rVk"/>
     </inferredMetricsTieBreakers>
