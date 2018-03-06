@@ -99,9 +99,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //cell was clicked on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let workoutView = self.storyboard?.instantiateViewController(withIdentifier: "WorkoutView") as! WorkoutViewController
-        let selectedWorkout = ALL_WORKOUTS[indexPath.row] as AnyObject
+        let selectedWorkout = CATEGORIZED_WORKOUTS[indexPath.section][indexPath.row] as AnyObject
         workoutView.workoutTitle = selectedWorkout.value(forKey: "workout") as? String
         workoutView.workoutDescription = selectedWorkout.value(forKey: "desc") as? String
+        workoutView.workoutTag = selectedWorkout.value(forKey: "tag") as? String
         workoutView.exercises = selectedWorkout.value(forKey: "exercises") as? NSArray
         
         self.navigationController?.pushViewController(workoutView, animated: true)
