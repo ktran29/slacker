@@ -15,15 +15,10 @@ class LiftingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // sets all the labels and fields.
         prepareViewController()
-        
-        
     }
     
-    
-
     
     // has to be received and sent
     var exercises: NSArray = []
@@ -41,9 +36,6 @@ class LiftingViewController: UIViewController {
     var changeMySets = true
     
     
-    
-    
-    
     @IBOutlet weak var exerciseTitle: UILabel!
     @IBOutlet weak var setXofY: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
@@ -55,18 +47,33 @@ class LiftingViewController: UIViewController {
     // ------------------ Functions ------------------
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print( "\(segue) is my Segue -------")
+        
+        print("Moving to \(String(describing: segue.identifier))")
+        
+        if segue.identifier == "liftingToBreak" {
+           let destination = segue.destination as! BreakViewController
+            
+            // all of this data is the data for the next exercise we will be doing.
+            // sets are reset to 0 and all variables are updated for the next one
+            destination.exercises = (self.exercises)
+            destination.workoutType = (self.workoutType)
+            destination.exerciseIndex = (self.exerciseIndex)
+            destination.sets = (self.sets)
+            
+            // we need to pass over the old rest time from the current exercise that we're finishing
+            // because that's what the break view controller uses for its timer.
+            destination.restTime = ((((exercises[exerciseIndex - 1]) as AnyObject).value(forKey: "rest")) as? Int)!
+        }
     }
+    
+    
     
     // perform segue to the break scene
     func moveToBreak() {
-        print("I am moving to a break view controller ") // --------------
-        // pass:
-        // workout time, rest time, exercises
-        // changeMySets:bool , sets __you don't want to change sets if you finished a workout__
-        // exercise index
         performSegue(withIdentifier: "liftingToBreak", sender: LiftingViewController.self)
     }
+    
+    
     
     
     func prepareViewController() -> Void {
@@ -112,10 +119,13 @@ class LiftingViewController: UIViewController {
             self.sets += 1
         }
         
+        
+        
         prepareViewController()
         if iNeedaBreak() {
             moveToBreak()
         }
+        
     }
     
 
@@ -128,7 +138,7 @@ class LiftingViewController: UIViewController {
     
     // checks whether we need a break now
     func iNeedaBreak() -> Bool {
-        return self.restTime > 0
+        return (self.restTime > 0)
     }
     
     
