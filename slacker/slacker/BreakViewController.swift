@@ -69,6 +69,7 @@ class BreakViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         timerLabel.text = timeString(time: TimeInterval(restTime))
         runTimer()
         
