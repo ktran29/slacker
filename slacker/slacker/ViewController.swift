@@ -25,7 +25,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var CATEGORIES: [String] = ["Regular", "Cardio", "HIIT"]
     var ALL_WORKOUTS: NSArray = []
+    var CATEGORIZED_WORKOUTS: [[AnyObject]] = [[], [], []]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +63,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // ______________ TABLE ______________
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.ALL_WORKOUTS.count
+//        print("here \(section)")
+//        print("workout \(self.CATEGORIZED_WORKOUTS[section])")
+        return self.CATEGORIZED_WORKOUTS[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.CATEGORIES[section]
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.CATEGORIES.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         
         if self.ALL_WORKOUTS.count > 0 {
-            let workout_category = self.ALL_WORKOUTS[indexPath.row]
+            let workout_category = self.CATEGORIZED_WORKOUTS[indexPath.section][indexPath.row]
             cell.workoutTitle.text =  (workout_category as AnyObject).value(forKey: "workout") as? String
             cell.workoutDescription.text =  (workout_category as AnyObject).value(forKey: "desc") as? String
             return cell
@@ -105,8 +118,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // downdloadData helper method.
     // initializes all workouts with the downloaded json data.
+    // separates workouts into groups
     func initializeAllWorkouts(_  jsonData:NSArray) {
         self.ALL_WORKOUTS = jsonData
+        for index in 0...self.ALL_WORKOUTS.count - 1 {
+            let workout = ALL_WORKOUTS[index] as AnyObject
+            let workoutTag = workout.value(forKey: "tag") as! String
+            switch workoutTag {
+            case "regular":
+                self.CATEGORIZED_WORKOUTS[0].append(workout)
+            case "cardio":
+                self.CATEGORIZED_WORKOUTS[1].append(workout)
+            case "hiit":
+                self.CATEGORIZED_WORKOUTS[2].append(workout)
+            default:
+                print("Invalid workout")
+            }
+        }
     }
     
     // Downloads, parses, and setsup all workout data from our website.
