@@ -64,7 +64,7 @@ class LiftingViewController: UIViewController {
             
             // we need to pass over the old rest time from the current exercise that we're finishing
             // because that's what the break view controller uses for its timer.
-            var restIndex:Int = self.exerciseIndex - 1
+            var restIndex:Int = self.exerciseIndex //- 1
             if restIndex < 0 {
                 restIndex = 0
             }
@@ -114,6 +114,8 @@ class LiftingViewController: UIViewController {
                 self.exerciseTitle.text = "WORKOUT DONE"
                 // Trasnition to Congrats page ____________
                 performSegue(withIdentifier: "liftToCongrats", sender: LiftingViewController.self)
+                return
+                
             
             // move on to next exercise
             } else {

@@ -35,7 +35,7 @@ class BreakViewController: UIViewController {
             timer.invalidate()
             timerLabel.text = "Done!"
             if (workoutType == "lift") {
-                performSegue(withIdentifier: "breatToLifting", sender: self) //transition to lift screen
+                performSegue(withIdentifier: "breakToLifting", sender: self) //transition to lift screen
             } else if (workoutType == "cardio") {
                 performSegue(withIdentifier: "breakToCardio", sender: self) //transition to cardio
             }
