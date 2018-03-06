@@ -21,7 +21,6 @@ class CardioViewController: UIViewController {
     // only sent
     var restTime: Int = 99999
     var workoutType = "cardio"
-    var changeMySets = true
     
     // re-calculated on view did load
     var totalSets: Int = 0
@@ -93,30 +92,26 @@ class CardioViewController: UIViewController {
     
     
     @IBAction func clickedNext(_ sender: UIButton) {
-       
         // done with this exercise
         if self.sets >= totalSets {
-            self.changeMySets = false
-            
             //check if entire workout is done
             if self.exerciseIndex >= self.exercises.count - 1 {
                 self.exerciseTitle.text = "WORKOUT DONE"
                 // Transition to Congrats page ____________
                 performSegue(withIdentifier: "cardioToCongrats", sender: CardioViewController.self)
-                
-                // move on to next exercise
+            // move on to next exercise or take a break
             } else {
                 rotateToNewExercise()
+                if iNeedaBreak() {
+                    performSegue(withIdentifier: "cardioToBreak", sender: CardioViewController.self)
+                }
             }
-
-        // not done with this exercise, break or next set
+        // not done with this exercise, next set or take a break
         } else {
-            self.changeMySets = true
             self.sets += 1
-        }
-        prepareViewController()
-        if iNeedaBreak() {
-            performSegue(withIdentifier: "cardioToBreak", sender: CardioViewController.self)
+            if iNeedaBreak() {
+                performSegue(withIdentifier: "cardioToBreak", sender: CardioViewController.self)
+            }
         }
     }
     
@@ -130,7 +125,6 @@ class CardioViewController: UIViewController {
     func iNeedaBreak() -> Bool {
         return self.restTime > 0
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,7 +144,6 @@ class CardioViewController: UIViewController {
         if segue.identifier == "cardioToBreak" {
             print("I am moving to a break view controller ") // --------------
             let destination = segue.destination as! BreakViewController
-            // changeMySets:bool , sets __you don't want to change sets if you finished a workout__
             destination.workoutType = (self.workoutType)
             destination.exercises = (self.exercises)
             destination.exerciseIndex = (self.exerciseIndex)
@@ -163,8 +156,6 @@ class CardioViewController: UIViewController {
             print("No segue was identified")
         }
     }
-    
-    
     
     
     /*
