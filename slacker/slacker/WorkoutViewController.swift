@@ -36,7 +36,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func clickedBegin(_ sender: UIButton) {
         let restTime = (self.exercises![0] as AnyObject).value(forKey: "rest")
-        let tag = self.exercises?.value(forKey: "rest")
+//        let tag = self.exercises?.value(forKey: "rest")
         
 //        print("\n\n")
 //        print(self.exercises)
@@ -44,7 +44,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         //if restTime as? Int == 0 {
-        if tag as? String == "regular" {
+        if self.workoutTag as? String == "regular" {
             // move to lifting scene
             self.nextSegue = "LiftingViewController"
             performSegue(withIdentifier: "overviewToLifting", sender: WorkoutViewController.self)

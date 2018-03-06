@@ -64,7 +64,13 @@ class LiftingViewController: UIViewController {
             
             // we need to pass over the old rest time from the current exercise that we're finishing
             // because that's what the break view controller uses for its timer.
-            destination.restTime = ((((exercises[exerciseIndex - 1]) as AnyObject).value(forKey: "rest")) as? Int)!
+            var restIndex:Int = self.exerciseIndex - 1
+            if restIndex < 0 {
+                restIndex = 0
+            }
+            destination.restTime = ((((exercises[ restIndex ]) as AnyObject).value(forKey: "rest")) as? Int)!
+            
+            print("Rest index = \(restIndex)")
         }
     }
     
