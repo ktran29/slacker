@@ -92,7 +92,12 @@ class LiftingViewController: UIViewController {
         self.restTime = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "rest")) as? Int)!
         
         self.setXofY.text = "Set \(self.sets) of \(self.totalSets)     | "
-        self.repsLabel.text = "\(self.reps) Reps"
+        if (reps == 1) {
+            self.repsLabel.text = "\(self.reps) Rep"
+        } else {
+            self.repsLabel.text = "\(self.reps) Reps"
+
+        }
     }
     
     func nextExercise() {
