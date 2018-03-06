@@ -17,6 +17,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     // gets data from overall workout view
     var workoutTitle : String?
     var workoutDescription : String?
+    var workoutTag : String?
     var exercises : NSArray?
     
     // this will be modified by clickedBegin and used
