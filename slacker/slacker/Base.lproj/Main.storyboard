@@ -448,13 +448,11 @@
                                             <action selector="closePopUp:" destination="1GF-qn-cj7" eventType="touchUpInside" id="Ev5-VP-KSA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="“Today I will do what others won’t, so tomorrow I can accomplish what others can’t.” —Jerry Rice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sen-qN-jds">
-                                        <rect key="frame" x="8" y="87" width="253" height="105"/>
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZl-VG-2A4">
+                                        <rect key="frame" x="14" y="96" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34670364856719971" green="0.93386620283126831" blue="0.74171805381774902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -462,6 +460,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nHe-Ee-7bM"/>
                     </view>
+                    <connections>
+                        <outlet property="myWebView" destination="LZl-VG-2A4" id="uWC-F8-h6m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7D-6s-Y7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
