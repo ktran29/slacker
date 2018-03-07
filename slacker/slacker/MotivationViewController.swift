@@ -15,11 +15,21 @@ class MotivationViewController: UIViewController {
         self.view.removeFromSuperview()
     }
     
+    
+    @IBOutlet weak var myWebView: UIWebView!
+    
+    func getVideo(videoCode:String)
+    {
+        let url = URL(string:"https://www.youtube.com/embed/\(videoCode)")
+        myWebView.loadRequest(URLRequest(url: url!))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.gray.withAlphaComponent(0.7)
         
+        getVideo(videoCode: "ZXsQAXx_ao0")
         // Do any additional setup after loading the view.
     }
 
