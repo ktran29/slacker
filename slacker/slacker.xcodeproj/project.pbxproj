@@ -17,6 +17,7 @@
 		65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D2F20474F3100C2B1BF /* AboutViewController.swift */; };
 		65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D3520474F8A00C2B1BF /* BreakViewController.swift */; };
 		65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D372047527700C2B1BF /* TableViewCell.swift */; };
+		99338354204FBEFE00A77647 /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99338353204FBEFE00A77647 /* MotivationViewController.swift */; };
 		B55BB7B6204B9E2400F5AE95 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */; };
 		B55BB7B8204B9F1100F5AE95 /* WORKOUT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */; };
 		B57E9C012048DE950008F795 /* LiftingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C002048DE950008F795 /* LiftingViewController.swift */; };
@@ -36,6 +37,7 @@
 		65F53D2F20474F3100C2B1BF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65F53D3520474F8A00C2B1BF /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		65F53D372047527700C2B1BF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		99338353204FBEFE00A77647 /* MotivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewController.swift; sourceTree = "<group>"; };
 		B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WORKOUT.jpg; sourceTree = "<group>"; };
 		B57E9C002048DE950008F795 /* LiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiftingViewController.swift; path = slacker/LiftingViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				65F53D1B2047477B00C2B1BF /* AppDelegate.swift */,
 				65F53D1D2047477B00C2B1BF /* ViewController.swift */,
 				65F53D3520474F8A00C2B1BF /* BreakViewController.swift */,
+				99338353204FBEFE00A77647 /* MotivationViewController.swift */,
 				B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */,
 				65F53D222047477B00C2B1BF /* Assets.xcassets */,
 				65F53D242047477B00C2B1BF /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 				65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */,
 				65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */,
 				B55BB7B6204B9E2400F5AE95 /* CongratsViewController.swift in Sources */,
+				99338354204FBEFE00A77647 /* MotivationViewController.swift in Sources */,
 				65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */,
 				65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */,
 				B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */,
