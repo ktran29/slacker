@@ -22,6 +22,15 @@ class BreakViewController: UIViewController {
     var exerciseIndex: Int = 0
     var sets: Int = 1
     
+    @IBAction func motivationButton(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! MotivationViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self) // might need to be popOverVC.didMoveToParentViewController(self)
+    }
+    
+    
     @IBOutlet weak var timerLabel: UILabel!
     
     func runTimer() {
