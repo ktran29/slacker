@@ -137,8 +137,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLx-wk-YNz">
+                                <rect key="frame" x="0.0" y="136" width="375" height="30"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="favoriteClicked:" destination="3Oo-Fn-Eh8" eventType="touchUpInside" id="3vt-ec-T24"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnW-8D-Leq">
+                                <rect key="frame" x="0.0" y="612" width="375" height="30"/>
+                                <state key="normal" title="Begin!"/>
+                                <connections>
+                                    <action selector="clickedBegin:" destination="3Oo-Fn-Eh8" eventType="touchUpInside" id="swU-wg-CGM"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HM5-up-98V">
-                                <rect key="frame" x="0.0" y="136" width="375" height="451"/>
+                                <rect key="frame" x="0.0" y="191" width="375" height="396"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="cCz-3t-DYk" style="IBUITableViewCellStyleDefault" id="yd0-Np-NtZ" customClass="ExerciseTableViewCell" customModule="slacker" customModuleProvider="target">
@@ -167,13 +181,6 @@
                                     <outlet property="delegate" destination="3Oo-Fn-Eh8" id="hI0-4h-J8h"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnW-8D-Leq">
-                                <rect key="frame" x="0.0" y="612" width="375" height="30"/>
-                                <state key="normal" title="Begin!"/>
-                                <connections>
-                                    <action selector="clickedBegin:" destination="3Oo-Fn-Eh8" eventType="touchUpInside" id="swU-wg-CGM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -181,19 +188,23 @@
                             <constraint firstItem="a3G-Nu-eZC" firstAttribute="trailing" secondItem="cnW-8D-Leq" secondAttribute="trailing" id="BdX-rc-nhO"/>
                             <constraint firstItem="HM5-up-98V" firstAttribute="leading" secondItem="a3G-Nu-eZC" secondAttribute="leading" id="CAW-5v-4tT"/>
                             <constraint firstItem="meB-0o-56F" firstAttribute="top" secondItem="a3G-Nu-eZC" secondAttribute="top" constant="25" id="Gy8-ci-K95"/>
-                            <constraint firstItem="cnW-8D-Leq" firstAttribute="top" secondItem="HM5-up-98V" secondAttribute="bottom" constant="25" id="KhT-zH-JNN"/>
+                            <constraint firstItem="xLx-wk-YNz" firstAttribute="top" secondItem="pvq-td-HEC" secondAttribute="bottom" constant="25" id="K2X-SL-k1S"/>
                             <constraint firstItem="a3G-Nu-eZC" firstAttribute="trailing" secondItem="meB-0o-56F" secondAttribute="trailing" id="N4w-g6-jBI"/>
                             <constraint firstItem="meB-0o-56F" firstAttribute="leading" secondItem="a3G-Nu-eZC" secondAttribute="leading" id="Ocg-dd-pkU"/>
+                            <constraint firstItem="a3G-Nu-eZC" firstAttribute="trailing" secondItem="xLx-wk-YNz" secondAttribute="trailing" id="U9E-Zc-u1U"/>
+                            <constraint firstItem="xLx-wk-YNz" firstAttribute="leading" secondItem="a3G-Nu-eZC" secondAttribute="leading" id="Wbc-uF-Zta"/>
                             <constraint firstItem="pvq-td-HEC" firstAttribute="top" secondItem="meB-0o-56F" secondAttribute="bottom" constant="25" id="Wqh-Pf-64R"/>
                             <constraint firstItem="pvq-td-HEC" firstAttribute="leading" secondItem="a3G-Nu-eZC" secondAttribute="leading" id="XE3-R2-s8T"/>
+                            <constraint firstItem="cnW-8D-Leq" firstAttribute="top" secondItem="HM5-up-98V" secondAttribute="bottom" constant="25" id="XV0-GB-ECJ"/>
                             <constraint firstItem="a3G-Nu-eZC" firstAttribute="trailing" secondItem="HM5-up-98V" secondAttribute="trailing" id="a63-WA-qdZ"/>
                             <constraint firstItem="a3G-Nu-eZC" firstAttribute="trailing" secondItem="pvq-td-HEC" secondAttribute="trailing" id="dhL-Uc-98x"/>
-                            <constraint firstItem="HM5-up-98V" firstAttribute="top" secondItem="pvq-td-HEC" secondAttribute="bottom" constant="25" id="pTd-NY-ddA"/>
+                            <constraint firstItem="HM5-up-98V" firstAttribute="top" secondItem="xLx-wk-YNz" secondAttribute="bottom" constant="25" id="eJS-BN-R9g"/>
                             <constraint firstItem="a3G-Nu-eZC" firstAttribute="bottom" secondItem="cnW-8D-Leq" secondAttribute="bottom" constant="25" id="qK7-dD-wZ6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a3G-Nu-eZC"/>
                     </view>
                     <connections>
+                        <outlet property="favoriteButton" destination="xLx-wk-YNz" id="Hv3-NS-Jku"/>
                         <outlet property="name" destination="meB-0o-56F" id="And-xo-zM3"/>
                         <outlet property="tableView" destination="HM5-up-98V" id="opp-wb-hB0"/>
                         <outlet property="workoutDesc" destination="pvq-td-HEC" id="4U0-kL-fJg"/>
@@ -203,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikf-MH-0cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="-247"/>
+            <point key="canvasLocation" x="-594.39999999999998" y="-247.82608695652175"/>
         </scene>
         <!--Lifting Scene-->
         <scene sceneID="brE-kD-Is3">

@@ -13,12 +13,13 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var workoutDesc: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var favoriteButton: UIButton!
     
     // gets data from overall workout view
     var workoutTitle : String?
     var workoutDescription : String?
     var workoutTag : String?
+    var workoutId : Int?
     var exercises : NSArray?
     
     // this will be modified by clickedBegin and used
@@ -60,6 +61,11 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             performSegue(withIdentifier: "overviewToCardio", sender: CardioViewController.self)
         }
     }
+    
+    @IBAction func favoriteClicked(_ sender: UIButton) {
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if self.nextSegue == "LiftingViewController" {

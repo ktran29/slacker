@@ -37,6 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.delegate = self;
         tableView.rowHeight = 68
         
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.object(forKey: "favorites") == nil {
+            userDefaults.set(NSMutableArray(), forKey: "favorites")
+            userDefaults.synchronize()
+        }
+        
         downloadData()
     }
     
@@ -103,6 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         workoutView.workoutTitle = selectedWorkout.value(forKey: "workout") as? String
         workoutView.workoutDescription = selectedWorkout.value(forKey: "desc") as? String
         workoutView.workoutTag = selectedWorkout.value(forKey: "tag") as? String
+        workoutView.workoutId = selectedWorkout.value(forKey: "id") as? Int
         workoutView.exercises = selectedWorkout.value(forKey: "exercises") as? NSArray
         
         self.navigationController?.pushViewController(workoutView, animated: true)
