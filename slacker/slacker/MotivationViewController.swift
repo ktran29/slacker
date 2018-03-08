@@ -10,7 +10,9 @@ import UIKit
 
 class MotivationViewController: UIViewController {
 
-   
+    var videos: [String] = ["ZXsQAXx_ao0", "LPD0z6K0VQY", "-sUKoKQlEC4", "R1JBQMXbN2k", "EyhOmBPtGNM", "mgmVOuLgFB0" ]
+    
+    //closes the popup
     @IBAction func closePopUp(_ sender: Any) {
         self.view.removeFromSuperview()
     }
@@ -18,10 +20,13 @@ class MotivationViewController: UIViewController {
     
     @IBOutlet weak var myWebView: UIWebView!
     
+    
     func getVideo(videoCode:String)
     {
-        let url = URL(string:"https://www.youtube.com/embed/\(videoCode)")
-        myWebView.loadRequest(URLRequest(url: url!))
+        guard
+            let url = URL(string:"https://www.youtube.com/embed/\(videoCode)")
+            else { return }
+        myWebView.loadRequest( URLRequest(url: url))
     }
     
     override func viewDidLoad() {
@@ -29,7 +34,7 @@ class MotivationViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.gray.withAlphaComponent(0.7)
         
-        getVideo(videoCode: "ZXsQAXx_ao0")
+        getVideo(videoCode: videos[Int(arc4random_uniform(6))]) //loads random video from videos array
         // Do any additional setup after loading the view.
     }
 
