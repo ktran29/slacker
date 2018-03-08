@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		65A2CBF12048E3FE005AA5E0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */; };
 		65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */; };
+		65DABC40205130C200F6F6D7 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */; };
+		65DABC42205130EC00F6F6D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC41205130EC00F6F6D7 /* TabBarViewController.swift */; };
+		65DABC442051314A00F6F6D7 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC432051314A00F6F6D7 /* FavoriteTableViewCell.swift */; };
 		65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D1B2047477B00C2B1BF /* AppDelegate.swift */; };
 		65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D1D2047477B00C2B1BF /* ViewController.swift */; };
 		65F53D212047477B00C2B1BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F53D1F2047477B00C2B1BF /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = slacker/WorkoutViewController.swift; sourceTree = "<group>"; };
 		65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		65DABC41205130EC00F6F6D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		65DABC432051314A00F6F6D7 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		65F53D182047477B00C2B1BF /* slacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F53D1B2047477B00C2B1BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65F53D1D2047477B00C2B1BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,11 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				65F53D1F2047477B00C2B1BF /* Main.storyboard */,
+				65DABC432051314A00F6F6D7 /* FavoriteTableViewCell.swift */,
 				B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */,
 				65F53D372047527700C2B1BF /* TableViewCell.swift */,
 				65F53D2F20474F3100C2B1BF /* AboutViewController.swift */,
 				65F53D1B2047477B00C2B1BF /* AppDelegate.swift */,
 				65F53D1D2047477B00C2B1BF /* ViewController.swift */,
+				65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */,
+				65DABC41205130EC00F6F6D7 /* TabBarViewController.swift */,
 				65F53D3520474F8A00C2B1BF /* BreakViewController.swift */,
 				99338353204FBEFE00A77647 /* MotivationViewController.swift */,
 				B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */,
@@ -172,11 +181,14 @@
 				65F53D3620474F8A00C2B1BF /* BreakViewController.swift in Sources */,
 				65F53D3020474F3100C2B1BF /* AboutViewController.swift in Sources */,
 				65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */,
+				65DABC442051314A00F6F6D7 /* FavoriteTableViewCell.swift in Sources */,
 				B55BB7B6204B9E2400F5AE95 /* CongratsViewController.swift in Sources */,
 				99338354204FBEFE00A77647 /* MotivationViewController.swift in Sources */,
 				65F53D382047527700C2B1BF /* TableViewCell.swift in Sources */,
 				65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */,
 				B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */,
+				65DABC42205130EC00F6F6D7 /* TabBarViewController.swift in Sources */,
+				65DABC40205130C200F6F6D7 /* FavoriteViewController.swift in Sources */,
 				65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  TabBarViewController.swift
 //  slacker
 //
-//  Created by Kevin Tran on 3/7/18.
+//  Created by Kevin Tran on 3/8/18.
 //  Copyright © 2018 ateamhasnoname. All rights reserved.
 //
 
@@ -13,6 +13,8 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.selectedIndex = 1
+        
         // Do any additional setup after loading the view.
     }
 

@@ -2,14 +2,14 @@
 //  FavoriteViewController.swift
 //  slacker
 //
-//  Created by Kevin Tran on 3/7/18.
+//  Created by Kevin Tran on 3/8/18.
 //  Copyright © 2018 ateamhasnoname. All rights reserved.
 //
 
 import UIKit
 
 class FavoriteViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
