@@ -36,7 +36,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 60.0
         
-        let favorites = userDefaults.object(forKey: "favorites") as! NSMutableArray
+        let favorites = userDefaults.object(forKey: "favorites") as! NSArray
         
         if (favorites.contains(workoutId)) {
             favoriteButton.setTitle("Remove from Favorites", for: .normal)
@@ -72,9 +72,18 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    // adds or removes workout from favorites page
     @IBAction func favoriteClicked(_ sender: UIButton) {
-        let favorites = userDefaults.object(forKey: "favorites") as! NSMutableArray
-        
+        let favorites = (userDefaults.object(forKey: "favorites") as! NSArray).mutableCopy() as! NSMutableArray
+        if (favorites.contains(workoutId!)) {
+            favorites.removeObject(at: favorites.index(of: workoutId!))
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+        } else {
+            favorites.add(workoutId!)
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+        }
+        userDefaults.set(favorites, forKey: "favorites")
+        userDefaults.synchronize()
     }
     
     
