@@ -15,6 +15,8 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    let userDefaults = UserDefaults.standard
+    
     // gets data from overall workout view
     var workoutTitle : String?
     var workoutDescription : String?
@@ -33,6 +35,14 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.delegate = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 60.0
+        
+        let favorites = userDefaults.object(forKey: "favorites") as! NSMutableArray
+        
+        if (favorites.contains(workoutId)) {
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+        } else {
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+        }
         
         name.text = workoutTitle!
         workoutDesc.text = workoutDescription!
@@ -63,6 +73,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func favoriteClicked(_ sender: UIButton) {
+        let favorites = userDefaults.object(forKey: "favorites") as! NSMutableArray
         
     }
     
