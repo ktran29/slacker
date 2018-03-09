@@ -311,7 +311,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Favorites" id="c5d-en-Rzi">
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="5ec-vd-4FG"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="5ec-vd-4FG">
+                                            <connections>
+                                                <action selector="editFavorites:" destination="SWe-TF-ahO" id="VN9-Lx-faz"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -373,6 +377,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LqL-4M-0Cf"/>
                     <connections>
+                        <outlet property="editButton" destination="5ec-vd-4FG" id="uFC-JY-uCm"/>
                         <outlet property="tableView" destination="dzF-fF-f3P" id="SCl-HW-Caq"/>
                     </connections>
                 </viewController>
