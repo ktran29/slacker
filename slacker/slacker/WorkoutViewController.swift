@@ -14,6 +14,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var workoutDesc: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    
     // gets data from overall workout view
     var workoutTitle : String?
     var workoutDescription : String?
@@ -26,13 +27,16 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.separatorStyle = .none
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 60.0
         
         name.text = workoutTitle!
         workoutDesc.text = workoutDescription!
+        
     }
-    
     
     @IBAction func clickedBegin(_ sender: UIButton) {
         let restTime = (self.exercises![0] as AnyObject).value(forKey: "rest")
@@ -44,7 +48,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         //if restTime as? Int == 0 {
-        if self.workoutTag as? String == "regular" {
+        if self.workoutTag == "regular" {
             // move to lifting scene
             self.nextSegue = "LiftingViewController"
             performSegue(withIdentifier: "overviewToLifting", sender: WorkoutViewController.self)
@@ -87,30 +91,12 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         let exerciseName = singleExercise.value(forKey: "name") as! String
         let numSets = singleExercise.value(forKey: "sets") as! Int
         let numReps = singleExercise.value(forKey: "reps") as! Int
-        var setText = ""
-        var repText = ""
-        if numSets == 1 {
-            setText = "set"
-        } else {
-            setText = "sets"
-        }
-        if numReps == 1 {
-            repText = "rep"
-        } else {
-            repText = "reps"
-        }
+        let setText = numSets == 1 ? "set" : "sets"
+        let repText = numReps == 1 ? "rep" : "reps"
+
+        
         cell.exerciseInfo.text = "\(exerciseName), \(numSets) \(setText), \(numReps) \(repText)"
         return cell
     }
-    
-    // for ben to work on
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let exerciseView = self.storyboard?.instantiateViewController(withIdentifier: "ExerciseView") as! ExerciseViewController
-//        let selectedExercise = exercises![indexPath.row] as AnyObject
-//        exerciseView.selectedExercise = selectedExercise
-//
-//        self.navigationController?.pushViewController(exerciseView, animated: true)
-//    }
-
 
 }
