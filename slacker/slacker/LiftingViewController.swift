@@ -14,7 +14,8 @@ class LiftingViewController: UIViewController {
     // ------------------ Fields ------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationController?.isNavigationBarHidden = true
         self.navigationItem.hidesBackButton = true
         
         // sets all the labels and fields.
@@ -93,9 +94,9 @@ class LiftingViewController: UIViewController {
         
         self.setXofY.text = "Set \(self.sets) of \(self.totalSets)     | "
         if (reps == 1) {
-            self.repsLabel.text = "\(self.reps) Rep"
+            self.repsLabel.text = "\(self.reps) Rep        |"
         } else {
-            self.repsLabel.text = "\(self.reps) Reps"
+            self.repsLabel.text = "\(self.reps) Reps       |"
 
         }
     }
