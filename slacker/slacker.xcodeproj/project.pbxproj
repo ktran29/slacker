@@ -12,6 +12,7 @@
 		65DABC40205130C200F6F6D7 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */; };
 		65DABC42205130EC00F6F6D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC41205130EC00F6F6D7 /* TabBarViewController.swift */; };
 		65DABC442051314A00F6F6D7 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC432051314A00F6F6D7 /* FavoriteTableViewCell.swift */; };
+		65DABC4620521FE600F6F6D7 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC4520521FE600F6F6D7 /* StopwatchViewController.swift */; };
 		65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D1B2047477B00C2B1BF /* AppDelegate.swift */; };
 		65F53D1E2047477B00C2B1BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F53D1D2047477B00C2B1BF /* ViewController.swift */; };
 		65F53D212047477B00C2B1BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F53D1F2047477B00C2B1BF /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		65DABC41205130EC00F6F6D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		65DABC432051314A00F6F6D7 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		65DABC4520521FE600F6F6D7 /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		65F53D182047477B00C2B1BF /* slacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F53D1B2047477B00C2B1BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65F53D1D2047477B00C2B1BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				65F53D1F2047477B00C2B1BF /* Main.storyboard */,
+				65DABC4520521FE600F6F6D7 /* StopwatchViewController.swift */,
 				65DABC432051314A00F6F6D7 /* FavoriteTableViewCell.swift */,
 				B55BB7B5204B9E2400F5AE95 /* CongratsViewController.swift */,
 				65F53D372047527700C2B1BF /* TableViewCell.swift */,
@@ -188,6 +191,7 @@
 				65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */,
 				B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */,
 				65DABC42205130EC00F6F6D7 /* TabBarViewController.swift in Sources */,
+				65DABC4620521FE600F6F6D7 /* StopwatchViewController.swift in Sources */,
 				65DABC40205130C200F6F6D7 /* FavoriteViewController.swift in Sources */,
 				65F53D1C2047477B00C2B1BF /* AppDelegate.swift in Sources */,
 			);

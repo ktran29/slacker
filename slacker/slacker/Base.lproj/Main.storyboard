@@ -11,6 +11,89 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Stopwatch-->
+        <scene sceneID="4Xz-2H-tXg">
+            <objects>
+                <viewController id="gBw-gn-1wC" customClass="StopwatchViewController" customModule="slacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phj-fW-PrT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="JiO-a2-MJY">
+                                <rect key="frame" x="0.0" y="120" width="375" height="398"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-6o-0su">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1g-c5-EZe">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="101.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tD-gC-siO">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="101.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsT-7n-CBQ">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="101.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aAJ-sz-pu3">
+                                        <rect key="frame" x="0.0" y="101.5" width="375" height="296.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O3-p3-AZQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="toggleStartStop:" destination="gBw-gn-1wC" eventType="touchUpInside" id="H82-yX-b3A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-fT-6uZ">
+                                                <rect key="frame" x="0.0" y="148" width="375" height="148.5"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetStopwatch:" destination="gBw-gn-1wC" eventType="touchUpInside" id="EVW-sw-Vnq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Ty-6o-0su" firstAttribute="leading" secondItem="JiO-a2-MJY" secondAttribute="leading" id="aQw-Th-J4h"/>
+                                    <constraint firstItem="aAJ-sz-pu3" firstAttribute="leading" secondItem="JiO-a2-MJY" secondAttribute="leading" id="dow-mM-hAI"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Ty-6o-0su" secondAttribute="trailing" id="q6p-im-rLL"/>
+                                    <constraint firstAttribute="trailing" secondItem="aAJ-sz-pu3" secondAttribute="trailing" id="yBA-Cl-ISA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JiO-a2-MJY" firstAttribute="top" secondItem="C1m-aQ-Qhg" secondAttribute="top" constant="100" id="7kr-87-S9e"/>
+                            <constraint firstItem="JiO-a2-MJY" firstAttribute="leading" secondItem="C1m-aQ-Qhg" secondAttribute="leading" id="DKP-Yy-bdv"/>
+                            <constraint firstItem="C1m-aQ-Qhg" firstAttribute="trailing" secondItem="JiO-a2-MJY" secondAttribute="trailing" id="WJa-fy-tv7"/>
+                            <constraint firstItem="C1m-aQ-Qhg" firstAttribute="bottom" secondItem="JiO-a2-MJY" secondAttribute="bottom" constant="100" id="r9X-IZ-NhN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C1m-aQ-Qhg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" id="nHW-QO-Hot"/>
+                    <connections>
+                        <outlet property="millisecondLabel" destination="GsT-7n-CBQ" id="AUW-99-sAR"/>
+                        <outlet property="minuteLabel" destination="F1g-c5-EZe" id="M5p-Ja-2FY"/>
+                        <outlet property="resetButton" destination="hYH-fT-6uZ" id="61C-tm-lGC"/>
+                        <outlet property="secondLabel" destination="9tD-gC-siO" id="1Wk-kr-39z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94O-lC-RrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1660" y="-2700"/>
+        </scene>
         <!--About Scene-->
         <scene sceneID="qEv-x7-yJ4">
             <objects>
@@ -397,6 +480,7 @@
                     <connections>
                         <segue destination="tnY-i7-PSl" kind="relationship" relationship="viewControllers" id="XWe-zE-L2g"/>
                         <segue destination="eBM-cL-pWA" kind="relationship" relationship="viewControllers" id="yWN-Yx-JqB"/>
+                        <segue destination="gBw-gn-1wC" kind="relationship" relationship="viewControllers" id="nuw-sZ-CfN"/>
                         <segue destination="hKD-DA-PIb" kind="relationship" relationship="viewControllers" id="wkK-wL-fqK"/>
                     </connections>
                 </tabBarController>
