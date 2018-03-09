@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "slacker/MotivationViewController.swift"
-            timestampString = "542167407.832715"
+            timestampString = "542258539.009886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "MotivationViewController"
             landmarkType = "3">
          </BreakpointContent>

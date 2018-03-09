@@ -10,23 +10,20 @@ import UIKit
 
 class MotivationViewController: UIViewController {
 
-    var videos: [String] = ["ZXsQAXx_ao0", "LPD0z6K0VQY", "-sUKoKQlEC4", "R1JBQMXbN2k", "EyhOmBPtGNM", "mgmVOuLgFB0" ]
+    var videos: [String] = ["ZXsQAXx_ao0", "LPD0z6K0VQY", "-sUKoKQlEC4", "", "EyhOmBPtGNM", "VZ2HcRl4wSk" ]
     
     //closes the popup
     @IBAction func closePopUp(_ sender: Any) {
         self.view.removeFromSuperview()
     }
     
-    
-    @IBOutlet weak var myWebView: UIWebView!
-    
+    @IBOutlet var myWebView: UIWebView!
     
     func getVideo(videoCode:String)
     {
-        guard
-            let url = URL(string:"https://www.youtube.com/embed/\(videoCode)")
-            else { return }
-        myWebView.loadRequest( URLRequest(url: url))
+            myWebView.allowsInlineMediaPlayback = true
+        
+            myWebView.loadHTMLString("<iframe width=\"\(myWebView.frame.width)\" height=\"\(myWebView.frame.height)\" src=\"https://www.youtube.com/embed/\(videoCode)?&playsinline=1\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>", baseURL: nil)
     }
     
     override func viewDidLoad() {

@@ -461,7 +461,7 @@
                         <viewLayoutGuide key="safeArea" id="nHe-Ee-7bM"/>
                     </view>
                     <connections>
-                        <outlet property="myWebView" destination="LZl-VG-2A4" id="uWC-F8-h6m"/>
+                        <outlet property="myWebView" destination="LZl-VG-2A4" id="zig-LN-srW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7D-6s-Y7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
