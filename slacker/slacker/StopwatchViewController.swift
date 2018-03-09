@@ -20,13 +20,17 @@ class StopwatchViewController: UIViewController {
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var millisecondLabel: UILabel!
-    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var stopResumeBtn: UIButton!
+    @IBOutlet weak var lapResetBtn: UIButton!
+    @IBOutlet weak var startBtn: UIButton!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        resetButton.isEnabled = false
+        startBtn.isHidden = false
+        stopResumeBtn.isHidden = true
+        lapResetBtn.isHidden = true
 
     }
 
@@ -35,22 +39,52 @@ class StopwatchViewController: UIViewController {
     
     }
     
-    @IBAction func toggleStartStop(_ sender: UIButton!) {
-
-        if (status) {
-            stop()
-            sender.setTitle("START", for: .normal)
-            resetButton.isEnabled = true
-
-        } else {
-            start()
-            sender.setTitle("STOP", for: .normal)
-            resetButton.isEnabled = false
-        }
-
+    @IBAction func startStopWatch(_ sender: UIButton) {
+        startBtn.isHidden = true
+        stopResumeBtn.isHidden = false
+        lapResetBtn.isHidden = false
+        start()
     }
     
-    @IBAction func resetStopwatch(_ sender: UIButton) {
+    @IBAction func stopResume(_ sender: UIButton) {
+        if status {
+            stop()
+        } else {
+            start()
+        }
+    }
+    
+    @IBAction func lapReset(_ sender: UIButton) {
+        if status {
+            lap()
+        } else {
+            reset()
+        }
+    }
+    
+    func stop() {
+        elapsed = Date().timeIntervalSinceReferenceDate - startTime
+        timer?.invalidate()
+        status = false
+        
+        self.stopResumeBtn.setTitle("RESUME", for: .normal)
+        self.lapResetBtn.setTitle("RESET", for: .normal)
+    }
+    
+    func start() {
+        startTime = Date().timeIntervalSinceReferenceDate - elapsed
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        status = true
+        
+        self.stopResumeBtn.setTitle("STOP", for: .normal)
+        self.lapResetBtn.setTitle("LAP", for: .normal)
+    }
+    
+    func lap() {
+        
+    }
+    
+    func reset() {
         timer?.invalidate()
         
         startTime = 0
@@ -62,24 +96,8 @@ class StopwatchViewController: UIViewController {
         minuteLabel.text = strReset
         secondLabel.text = strReset
         millisecondLabel.text = strReset
-    }
-
-    func start() {
-
-        startTime = Date().timeIntervalSinceReferenceDate - elapsed
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-
-        status = true
-
-    }
-
-    func stop() {
-
-        elapsed = Date().timeIntervalSinceReferenceDate - startTime
-        timer?.invalidate()
-
-        status = false
-
+        
+        self.viewDidLoad()
     }
 
     @objc func updateCounter() {
@@ -102,6 +120,10 @@ class StopwatchViewController: UIViewController {
         secondLabel.text = strSeconds
         millisecondLabel.text = strMilliseconds
 
+    }
+    
+    @objc func updateLapCounter() {
+        
     }
 }
 
