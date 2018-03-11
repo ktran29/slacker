@@ -6,6 +6,20 @@
 //  Copyright © 2018 ateamhasnoname. All rights reserved.
 //
 
+
+
+/*
+
+ HOW TO USE THIS:
+
+ Within View Load:
+     - If you want to to use the default image that I've set do:
+        <view.addBackground()>
+     - If you want to pass in the name of a specific image do:
+        <view.addBackground("boxingEdited3.jpg")>
+ 
+ */
+
 import Foundation
 import UIKit
 extension UIView {
