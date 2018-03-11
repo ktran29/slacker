@@ -249,7 +249,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJJ-lC-8Q4">
-                                <rect key="frame" x="15" y="188" width="344" height="383"/>
+                                <rect key="frame" x="15" y="188" width="330" height="383"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="7Ze-T0-kHu"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Description Description Description Description Description Description DescriptionDescription Description Description Description Description Description Description</string>
@@ -271,7 +274,7 @@
                             <constraint firstItem="XJJ-lC-8Q4" firstAttribute="top" secondItem="GDF-aW-4tv" secondAttribute="bottom" constant="35.5" id="DX6-JX-9Oc"/>
                             <constraint firstItem="N9m-YJ-Khw" firstAttribute="centerX" secondItem="hA6-SV-p8B" secondAttribute="centerX" id="Iis-ed-RdE"/>
                             <constraint firstItem="GDF-aW-4tv" firstAttribute="top" secondItem="0kd-ra-YFk" secondAttribute="bottom" constant="8" id="LT2-T5-Nj0"/>
-                            <constraint firstAttribute="trailing" secondItem="XJJ-lC-8Q4" secondAttribute="trailing" constant="16" id="Njg-sX-pz9"/>
+                            <constraint firstAttribute="trailing" secondItem="XJJ-lC-8Q4" secondAttribute="trailing" constant="30" id="Njg-sX-pz9"/>
                             <constraint firstItem="hA6-SV-p8B" firstAttribute="trailing" secondItem="0kd-ra-YFk" secondAttribute="trailing" constant="16" id="RcB-uE-EB6"/>
                             <constraint firstItem="hA6-SV-p8B" firstAttribute="trailing" secondItem="GDF-aW-4tv" secondAttribute="trailing" constant="16" id="WzE-cG-YBE"/>
                             <constraint firstItem="LdP-ul-C2K" firstAttribute="leading" secondItem="hA6-SV-p8B" secondAttribute="leading" constant="15" id="XDn-jw-VOr"/>

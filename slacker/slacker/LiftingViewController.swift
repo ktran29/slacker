@@ -20,6 +20,7 @@ class LiftingViewController: UIViewController {
         
         // sets all the labels and fields.
         prepareViewController()
+        self.exDescription.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
