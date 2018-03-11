@@ -13,12 +13,15 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var workoutDesc: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var favoriteButton: UIButton!
     
+    let userDefaults = UserDefaults.standard
     
     // gets data from overall workout view
     var workoutTitle : String?
     var workoutDescription : String?
     var workoutTag : String?
+    var workoutId : Int?
     var exercises : NSArray?
     
     // this will be modified by clickedBegin and used
@@ -32,6 +35,14 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.delegate = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 60.0
+        
+        let favorites = userDefaults.object(forKey: "favorites") as! NSArray
+        
+        if (favorites.contains(workoutId)) {
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+        } else {
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+        }
         
         name.text = workoutTitle!
         workoutDesc.text = workoutDescription!
@@ -60,6 +71,21 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             performSegue(withIdentifier: "overviewToCardio", sender: CardioViewController.self)
         }
     }
+    
+    // adds or removes workout from favorites page
+    @IBAction func favoriteClicked(_ sender: UIButton) {
+        let favorites = (userDefaults.object(forKey: "favorites") as! NSArray).mutableCopy() as! NSMutableArray
+        if (favorites.contains(workoutId!)) {
+            favorites.removeObject(at: favorites.index(of: workoutId!))
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+        } else {
+            favorites.add(workoutId!)
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+        }
+        userDefaults.set(favorites, forKey: "favorites")
+        userDefaults.synchronize()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if self.nextSegue == "LiftingViewController" {
