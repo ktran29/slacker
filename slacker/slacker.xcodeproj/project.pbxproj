@@ -27,6 +27,9 @@
 		B55BB7B8204B9F1100F5AE95 /* WORKOUT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */; };
 		B562E6432055B3280080D99B /* benwWallpaperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B562E6422055B3280080D99B /* benwWallpaperBuilder.swift */; };
 		B562E6452055B55F0080D99B /* boxing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B562E6442055B55F0080D99B /* boxing.jpg */; };
+		B562E6472055C7100080D99B /* boxingEdited.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B562E6462055C7100080D99B /* boxingEdited.jpg */; };
+		B562E6492055C86C0080D99B /* boxingEdited2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B562E6482055C86B0080D99B /* boxingEdited2.jpg */; };
+		B562E64B2055C9CC0080D99B /* boxingEdited3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B562E64A2055C9CC0080D99B /* boxingEdited3.jpg */; };
 		B57E9C012048DE950008F795 /* LiftingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C002048DE950008F795 /* LiftingViewController.swift */; };
 		B57E9C032048DEA00008F795 /* CardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E9C022048DEA00008F795 /* CardioViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,9 @@
 		B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WORKOUT.jpg; sourceTree = "<group>"; };
 		B562E6422055B3280080D99B /* benwWallpaperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = benwWallpaperBuilder.swift; path = slacker/benwWallpaperBuilder.swift; sourceTree = "<group>"; };
 		B562E6442055B55F0080D99B /* boxing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boxing.jpg; sourceTree = "<group>"; };
+		B562E6462055C7100080D99B /* boxingEdited.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boxingEdited.jpg; sourceTree = "<group>"; };
+		B562E6482055C86B0080D99B /* boxingEdited2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boxingEdited2.jpg; sourceTree = "<group>"; };
+		B562E64A2055C9CC0080D99B /* boxingEdited3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boxingEdited3.jpg; sourceTree = "<group>"; };
 		B57E9C002048DE950008F795 /* LiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiftingViewController.swift; path = slacker/LiftingViewController.swift; sourceTree = "<group>"; };
 		B57E9C022048DEA00008F795 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardioViewController.swift; path = slacker/CardioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,9 @@
 				65F53D3520474F8A00C2B1BF /* BreakViewController.swift */,
 				99338353204FBEFE00A77647 /* MotivationViewController.swift */,
 				B562E6442055B55F0080D99B /* boxing.jpg */,
+				B562E64A2055C9CC0080D99B /* boxingEdited3.jpg */,
+				B562E6462055C7100080D99B /* boxingEdited.jpg */,
+				B562E6482055C86B0080D99B /* boxingEdited2.jpg */,
 				B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */,
 				65F53D222047477B00C2B1BF /* Assets.xcassets */,
 				65F53D242047477B00C2B1BF /* LaunchScreen.storyboard */,
@@ -175,10 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F53D262047477B00C2B1BF /* LaunchScreen.storyboard in Resources */,
+				B562E64B2055C9CC0080D99B /* boxingEdited3.jpg in Resources */,
 				B55BB7B8204B9F1100F5AE95 /* WORKOUT.jpg in Resources */,
+				B562E6492055C86C0080D99B /* boxingEdited2.jpg in Resources */,
 				65F53D232047477B00C2B1BF /* Assets.xcassets in Resources */,
 				65F53D212047477B00C2B1BF /* Main.storyboard in Resources */,
 				B562E6452055B55F0080D99B /* boxing.jpg in Resources */,
+				B562E6472055C7100080D99B /* boxingEdited.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +355,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y6PR999CDT;
+				DEVELOPMENT_TEAM = TGUTWTJ65J;
 				INFOPLIST_FILE = slacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ateamhasnoname.slacker;
+				PRODUCT_BUNDLE_IDENTIFIER = "github.com-bwalchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,10 +370,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y6PR999CDT;
+				DEVELOPMENT_TEAM = TGUTWTJ65J;
 				INFOPLIST_FILE = slacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ateamhasnoname.slacker;
+				PRODUCT_BUNDLE_IDENTIFIER = "github.com-bwalchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

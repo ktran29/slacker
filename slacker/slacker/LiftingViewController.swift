@@ -28,6 +28,7 @@ class LiftingViewController: UIViewController {
         
         
         view.addBackground()
+//        view.addBackground("boxingEdited3.jpg")
     }
     
     func addBackground() {
@@ -121,6 +122,7 @@ class LiftingViewController: UIViewController {
             self.repsLabel.text = "\(self.reps) Reps       |"
 
         }
+        self.exDescription.textColor = UIColor.white
     }
     
     func nextExercise() {
