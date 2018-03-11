@@ -21,6 +21,27 @@ class LiftingViewController: UIViewController {
         // sets all the labels and fields.
         prepareViewController()
         self.exDescription.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+//        addBackground()
+        
+        
+        
+        view.addBackground()
+    }
+    
+    func addBackground() {
+        let width = UIScreen.main.bounds.size.width
+        let height = UIScreen.main.bounds.size.height
+        
+        let imageViewBackground = UIImageView(frame: CGRect(x:0, y:0, width: width, height: height))
+        imageViewBackground.image = UIImage(named: "boxing.jpg")
+        
+        // you can change the content mode:
+        imageViewBackground.contentMode = UIViewContentMode.scaleAspectFill
+        
+        self.view.addSubview(imageViewBackground)
+        self.view.sendSubview(toBack: imageViewBackground)
     }
     
     
