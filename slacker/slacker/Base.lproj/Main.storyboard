@@ -203,7 +203,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C1m-aQ-Qhg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stopwatch" id="nHW-QO-Hot"/>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="001-stopwatch" landscapeImage="001-stopwatch" selectedImage="001-stopwatch" id="nHW-QO-Hot">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="lapMillisecondLabel" destination="ejn-vX-4fM" id="X50-qi-NUL"/>
                         <outlet property="lapMinuteLabel" destination="DKE-yJ-ZbJ" id="4UF-Yr-I5U"/>
@@ -249,7 +255,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pnU-X6-RZp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="CCY-vi-yEV"/>
+                    <tabBarItem key="tabBarItem" title="About" image="003-information" landscapeImage="003-information" selectedImage="003-information" id="CCY-vi-yEV">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47517639398574829" blue="0.99913233518600464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWS-WF-PgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -612,6 +624,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47581132049632047" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="tnY-i7-PSl" kind="relationship" relationship="viewControllers" id="XWe-zE-L2g"/>
@@ -621,6 +638,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MK5-fR-OZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Item" id="dpl-Zc-SYF"/>
             </objects>
             <point key="canvasLocation" x="-2256.8000000000002" y="-1816.6416791604199"/>
         </scene>
@@ -884,11 +902,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice job on finishing your workout." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-bD-dcb">
-                                <rect key="frame" x="28" y="578" width="264" height="20.5"/>
+                                <rect key="frame" x="28" y="500" width="264" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cea-BO-R6q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="h3S-sr-eQ4">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="NAr-nl-J19"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -905,11 +932,17 @@
             </objects>
             <point key="canvasLocation" x="2301.5999999999999" y="-389.05547226386807"/>
         </scene>
-        <!--Workouts-->
+        <!--Workout-->
         <scene sceneID="22b-4U-8Zf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eBM-cL-pWA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workouts" id="SnL-R6-Ruk"/>
+                <navigationController title="Workout" automaticallyAdjustsScrollViewInsets="NO" id="eBM-cL-pWA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" image="002-dumbbell-with-weights-outline" landscapeImage="002-dumbbell-with-weights-outline" selectedImage="002-dumbbell-with-weights-outline" id="SnL-R6-Ruk">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qBP-Jr-0C4">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -944,10 +977,15 @@
             <point key="canvasLocation" x="-4462" y="-1720"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="001-stopwatch" width="32" height="32"/>
+        <image name="002-dumbbell-with-weights-outline" width="32" height="32"/>
+        <image name="003-information" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iRg-S7-jkb"/>
-        <segue reference="ikY-EC-C5c"/>
-        <segue reference="Hh7-JR-h1V"/>
-        <segue reference="ZWs-On-41p"/>
+        <segue reference="tEQ-Id-aC9"/>
+        <segue reference="dxd-KF-dZd"/>
+        <segue reference="y8U-xA-O9G"/>
+        <segue reference="uVm-YY-rVk"/>
     </inferredMetricsTieBreakers>
 </document>

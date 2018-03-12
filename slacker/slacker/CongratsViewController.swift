@@ -12,9 +12,20 @@ class CongratsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        
+        self.title = ""
         view.addBackground("WORKOUT.jpg")
+        
+        let myBackButton:UIButton = UIButton(type: UIButtonType.custom) as UIButton
+        myBackButton.addTarget(self, action: #selector(popToRoot), for: UIControlEvents.touchUpInside)
+        myBackButton.setTitle("Back", for: .normal)
+        myBackButton.setTitleColor(UIColor.blue, for: .normal)
+        myBackButton.sizeToFit()
+        let myCustomBackButtonItem:UIBarButtonItem = UIBarButtonItem(customView: myBackButton)
+        self.navigationItem.leftBarButtonItem  = myCustomBackButtonItem
+    }
+    
+    @objc func popToRoot(sender:UIBarButtonItem){
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     

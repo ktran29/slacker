@@ -14,8 +14,7 @@ class LiftingViewController: UIViewController {
     // ------------------ Fields ------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.isNavigationBarHidden = true
+        self.title = ""
         self.navigationItem.hidesBackButton = true
         
         // sets all the labels and fields.

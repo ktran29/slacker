@@ -35,6 +35,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.delegate = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 60.0
+        self.title = ""
         
         let favorites = userDefaults.object(forKey: "favorites") as! NSArray
         
