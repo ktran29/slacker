@@ -81,6 +81,7 @@ class BreakViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         timerLabel.text = timeString(time: TimeInterval(restTime))
         runTimer()
+        view.addBackground()
         
         // Do any additional setup after loading the view.
     }
