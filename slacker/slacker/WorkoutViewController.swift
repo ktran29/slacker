@@ -94,7 +94,6 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("Seguing to LiftViewController --------")
             
         } else if self.nextSegue == "CardioViewController"{
-            // CONNOR ---- choose what data to pass over here
             let destination = segue.destination as! CardioViewController
             destination.exercises = (self.exercises)!
             print("Seguing to CardioViewController --------")

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17794B892055FCC500FB9BF4 /* Running.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17794B882055FCC500FB9BF4 /* Running.jpg */; };
 		65A2CBF12048E3FE005AA5E0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */; };
 		65A2CBF52049445A005AA5E0 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */; };
 		65DABC40205130C200F6F6D7 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17794B882055FCC500FB9BF4 /* Running.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Running.jpg; sourceTree = "<group>"; };
 		65A2CBF02048E3FE005AA5E0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = slacker/WorkoutViewController.swift; sourceTree = "<group>"; };
 		65A2CBF42049445A005AA5E0 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		65DABC3F205130C200F6F6D7 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				B562E64A2055C9CC0080D99B /* boxingEdited3.jpg */,
 				B562E6462055C7100080D99B /* boxingEdited.jpg */,
 				B562E6482055C86B0080D99B /* boxingEdited2.jpg */,
+				17794B882055FCC500FB9BF4 /* Running.jpg */,
 				B55BB7B7204B9F1000F5AE95 /* WORKOUT.jpg */,
 				65F53D222047477B00C2B1BF /* Assets.xcassets */,
 				65F53D242047477B00C2B1BF /* LaunchScreen.storyboard */,
@@ -188,6 +191,7 @@
 				B55BB7B8204B9F1100F5AE95 /* WORKOUT.jpg in Resources */,
 				B562E6492055C86C0080D99B /* boxingEdited2.jpg in Resources */,
 				65F53D232047477B00C2B1BF /* Assets.xcassets in Resources */,
+				17794B892055FCC500FB9BF4 /* Running.jpg in Resources */,
 				65F53D212047477B00C2B1BF /* Main.storyboard in Resources */,
 				B562E6452055B55F0080D99B /* boxing.jpg in Resources */,
 				B562E6472055C7100080D99B /* boxingEdited.jpg in Resources */,

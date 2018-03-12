@@ -44,6 +44,7 @@ class CardioViewController: UIViewController {
         timer.invalidate()
         startBtn.isEnabled = true
         pauseBtn.isEnabled = false
+        self.startBtn.setTitle("Resume", for: .normal)
     }
     
 
@@ -72,6 +73,7 @@ class CardioViewController: UIViewController {
         self.totalSets = (((exercises[exerciseIndex]) as AnyObject).value(forKey: "sets") as? Int)!
         self.restTime = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "rest")) as? Int)!
         self.setXofY.text = "Set \(self.sets) of \(self.totalSets)"
+        self.exDescription.textColor = UIColor.white
 //        Are these needed? Maybe for abs or something between running exercises?
 //        self.reps = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "reps")) as? Int)!
 //        self.repsLabel.text = "\(self.reps) Reps"
@@ -130,6 +132,7 @@ class CardioViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         prepareViewController()
+        view.addBackground("Running.jpg")
         //runTimer()  // Enable this to have the timer start onLoad
         // Do any additional setup after loading the view.
     }
