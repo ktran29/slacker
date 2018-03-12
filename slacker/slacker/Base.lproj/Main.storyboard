@@ -133,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="192.5" width="320" height="266.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stopwatchCell" id="jKr-eb-M8Y" customClass="StopwatchTableViewCell" customModule="slacker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stopwatchCell" id="jKr-eb-M8Y" customClass="StopwatchTableViewCell" customModule="slacker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jKr-eb-M8Y" id="6YA-Q8-L3g">
@@ -203,7 +203,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C1m-aQ-Qhg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stopwatch" id="nHW-QO-Hot"/>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="001-stopwatch" landscapeImage="001-stopwatch" selectedImage="001-stopwatch" id="nHW-QO-Hot">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="lapMillisecondLabel" destination="ejn-vX-4fM" id="X50-qi-NUL"/>
                         <outlet property="lapMinuteLabel" destination="DKE-yJ-ZbJ" id="4UF-Yr-I5U"/>
@@ -249,7 +255,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pnU-X6-RZp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="CCY-vi-yEV"/>
+                    <tabBarItem key="tabBarItem" title="About" image="003-information" landscapeImage="003-information" selectedImage="003-information" id="CCY-vi-yEV">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47517639398574829" blue="0.99913233518600464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWS-WF-PgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,7 +279,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="7" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="51" id="0n1-wb-LKs" customClass="TableViewCell" customModule="slacker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="7" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="51" id="0n1-wb-LKs" customClass="TableViewCell" customModule="slacker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0n1-wb-LKs" id="QdI-fU-qSI">
@@ -366,7 +378,7 @@
                                 <rect key="frame" x="0.0" y="191" width="320" height="297"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="cCz-3t-DYk" style="IBUITableViewCellStyleDefault" id="yd0-Np-NtZ" customClass="ExerciseTableViewCell" customModule="slacker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="cCz-3t-DYk" style="IBUITableViewCellStyleDefault" id="yd0-Np-NtZ" customClass="ExerciseTableViewCell" customModule="slacker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yd0-Np-NtZ" id="NG8-SS-Nke">
@@ -548,16 +560,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0IZ-7L-7X4">
-                                                    <rect key="frame" x="15" y="11" width="538" height="22.5"/>
+                                                    <rect key="frame" x="15" y="11" width="290" height="22.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-8c-jqM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nm-Xi-lHl">
-                                                            <rect key="frame" x="269" y="0.0" width="269" height="22.5"/>
+                                                            <rect key="frame" x="145" y="0.0" width="145" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -610,6 +622,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47396980263917765" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="tnY-i7-PSl" kind="relationship" relationship="viewControllers" id="XWe-zE-L2g"/>
@@ -619,6 +636,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MK5-fR-OZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Item" id="dpl-Zc-SYF"/>
             </objects>
             <point key="canvasLocation" x="-2256.8000000000002" y="-1816.6416791604199"/>
         </scene>
@@ -903,11 +921,17 @@
             </objects>
             <point key="canvasLocation" x="2301.5999999999999" y="-389.05547226386807"/>
         </scene>
-        <!--Workouts-->
+        <!--Workout-->
         <scene sceneID="22b-4U-8Zf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eBM-cL-pWA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workouts" id="SnL-R6-Ruk"/>
+                <navigationController title="Workout" automaticallyAdjustsScrollViewInsets="NO" id="eBM-cL-pWA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" image="002-dumbbell-with-weights-outline" landscapeImage="002-dumbbell-with-weights-outline" selectedImage="002-dumbbell-with-weights-outline" id="SnL-R6-Ruk">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qBP-Jr-0C4">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -942,6 +966,11 @@
             <point key="canvasLocation" x="-4462" y="-1720"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="001-stopwatch" width="32" height="32"/>
+        <image name="002-dumbbell-with-weights-outline" width="32" height="32"/>
+        <image name="003-information" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iRg-S7-jkb"/>
         <segue reference="ikY-EC-C5c"/>
