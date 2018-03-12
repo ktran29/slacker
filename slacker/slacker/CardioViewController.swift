@@ -32,6 +32,7 @@ class CardioViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
     
     
     @IBAction func startBtnPressed(_ sender: Any) {
@@ -58,8 +59,8 @@ class CardioViewController: UIViewController {
         timerLabel.text = timeString(time: TimeInterval(exTime)) //This will update the label
         if (exTime == 0) {
             timer.invalidate()
-            timerLabel.text = "Done!"
-            //Could make is so that this enables the next button
+            timerLabel.text = "Done!" //disable this if it automattically segues
+            nextBtn.isEnabled = true;
         }
     }
     
@@ -68,13 +69,14 @@ class CardioViewController: UIViewController {
         self.exerciseTitle.text = ((exercises[exerciseIndex]) as AnyObject).value(forKey: "name") as? String
         self.exDescription.text = ((exercises[exerciseIndex]) as AnyObject).value(forKey: "desc") as? String
         self.exTime = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "duration")) as? Int)!
-        timerLabel.text = timeString(time: TimeInterval(exTime))
-        pauseBtn.isEnabled = false
         self.totalSets = (((exercises[exerciseIndex]) as AnyObject).value(forKey: "sets") as? Int)!
         self.restTime = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "rest")) as? Int)!
         self.setXofY.text = "Set \(self.sets) of \(self.totalSets)"
         self.exDescription.textColor = UIColor.white
-//        Are these needed? Maybe for abs or something between running exercises?
+        timerLabel.text = timeString(time: TimeInterval(exTime))
+        pauseBtn.isEnabled = false
+        nextBtn.isEnabled = false
+//        These can be added and used for ab or other workouts inbetween ruuning exercises.
 //        self.reps = ((((exercises[exerciseIndex]) as AnyObject).value(forKey: "reps")) as? Int)!
 //        self.repsLabel.text = "\(self.reps) Reps"
     }
@@ -92,7 +94,7 @@ class CardioViewController: UIViewController {
         self.sets = 0
     }
     
-    
+    // segues to the next scene
     @IBAction func clickedNext(_ sender: UIButton) {
         // done with this exercise
         if self.sets >= totalSets {
@@ -155,7 +157,7 @@ class CardioViewController: UIViewController {
             destination.restTime = (self.restTime)
         } else if segue.identifier == "cardioToCongrats" {
             print("I am moving to a congrats view controller ") // --------------
-            let destination = segue.destination as! CongratsViewController
+            //let destination = segue.destination as! CongratsViewController
         } else {
             print("No segue was identified")
         }

@@ -762,6 +762,7 @@
                     <connections>
                         <outlet property="exDescription" destination="ys2-qA-ruG" id="qtz-LQ-Me6"/>
                         <outlet property="exerciseTitle" destination="2JH-mZ-RoM" id="va3-g5-29O"/>
+                        <outlet property="nextBtn" destination="CHZ-VX-Z6r" id="13y-7s-XRe"/>
                         <outlet property="pauseBtn" destination="1WU-Po-AFw" id="URV-vl-kOf"/>
                         <outlet property="setXofY" destination="3Fz-34-WNQ" id="6PE-0n-UID"/>
                         <outlet property="startBtn" destination="lhJ-tv-FVY" id="48T-2M-D5Q"/>
@@ -1010,8 +1011,8 @@
         <image name="003-information" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tEQ-Id-aC9"/>
-        <segue reference="dxd-KF-dZd"/>
+        <segue reference="iRg-S7-jkb"/>
+        <segue reference="ikY-EC-C5c"/>
         <segue reference="Hh7-JR-h1V"/>
         <segue reference="ZWs-On-41p"/>
     </inferredMetricsTieBreakers>
