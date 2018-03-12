@@ -11,7 +11,7 @@ import UIKit
 class MotivationViewController: UIViewController {
     
     //array containing the video identifier for each video
-    var videos: [String] = ["ZXsQAXx_ao0", "LPD0z6K0VQY", "-sUKoKQlEC4", "", "EyhOmBPtGNM", "VZ2HcRl4wSk" ]
+    var videos: [String] = ["ZXsQAXx_ao0", "1H_fL_IFUgw", "-sUKoKQlEC4", "oSDhhZtRwFU", "EyhOmBPtGNM", "VZ2HcRl4wSk" ]
     
     //closes the popup and stops the video
     @IBAction func closePopUp(_ sender: Any) {
@@ -26,6 +26,7 @@ class MotivationViewController: UIViewController {
             //alows the video to play without entering the video player
             myWebView.allowsInlineMediaPlayback = true
         
+            
             //loads the video in the popup
             myWebView.loadHTMLString("<iframe width=\"\(myWebView.frame.width)\" height=\"\(myWebView.frame.height)\" src=\"https://www.youtube.com/embed/\(videoCode)?&playsinline=1\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>", baseURL: nil)
     }
