@@ -230,23 +230,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjy-E3-on9">
-                                <rect key="frame" x="150" y="47" width="75" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjy-E3-on9">
+                                <rect key="frame" x="123" y="58" width="63.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-cX-5uw">
-                                <rect key="frame" x="16" y="98" width="288" height="421"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-cX-5uw">
+                                <rect key="frame" x="22" y="117.5" width="276" height="264"/>
+                                <string key="text">Welcome to the abouts page. The purpose of this app is to serve as a workout and gym guide to beginner and intermediate atheletes. We've found that too many people walk into a gym feeling overwhelmed by the number and the types of workouts. Going online they are thrown multitudes of different opinions. Here with Slacker, we offer a simple and straightforward gym guide that walks you through each exercise.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg5-0u-LYW">
+                                <rect key="frame" x="122" y="455" width="77" height="30"/>
+                                <state key="normal" title="Contact Us"/>
+                                <connections>
+                                    <action selector="ContactPressed:" destination="hKD-DA-PIb" eventType="touchUpInside" id="cIG-Xd-v4e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l9Z-cX-5uw" firstAttribute="top" secondItem="Wjy-E3-on9" secondAttribute="bottom" constant="33" id="BvB-Zj-dmQ"/>
+                            <constraint firstItem="pnU-X6-RZp" firstAttribute="trailing" secondItem="Dg5-0u-LYW" secondAttribute="trailing" constant="121" id="BvQ-P2-NMw"/>
+                            <constraint firstItem="Dg5-0u-LYW" firstAttribute="leading" secondItem="pnU-X6-RZp" secondAttribute="leading" constant="122" id="NoD-CW-RwS"/>
+                            <constraint firstItem="pnU-X6-RZp" firstAttribute="bottom" secondItem="Dg5-0u-LYW" secondAttribute="bottom" constant="34" id="afd-7b-234"/>
+                            <constraint firstAttribute="trailing" secondItem="l9Z-cX-5uw" secondAttribute="trailing" constant="22" id="dQY-E1-eJF"/>
+                            <constraint firstItem="Wjy-E3-on9" firstAttribute="leading" secondItem="pnU-X6-RZp" secondAttribute="leading" constant="123" id="ijk-JH-EXL"/>
+                            <constraint firstItem="pnU-X6-RZp" firstAttribute="trailing" secondItem="Wjy-E3-on9" secondAttribute="trailing" constant="133.5" id="vXN-s6-uun"/>
+                            <constraint firstItem="Wjy-E3-on9" firstAttribute="top" secondItem="pnU-X6-RZp" secondAttribute="top" constant="38" id="yAJ-bd-C6v"/>
+                            <constraint firstItem="l9Z-cX-5uw" firstAttribute="leading" secondItem="pnU-X6-RZp" secondAttribute="leading" constant="22" id="yxB-5S-PX4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pnU-X6-RZp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="003-information" landscapeImage="003-information" selectedImage="003-information" id="CCY-vi-yEV">

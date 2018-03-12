@@ -21,7 +21,13 @@ class AboutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func ContactPressed(_ sender: UIButton) {
+        let email = "contact@bwalchen.com"
+        if let url = URL(string: "mailto:\(email)") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
