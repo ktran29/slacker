@@ -230,21 +230,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjy-E3-on9">
-                                <rect key="frame" x="123" y="58" width="63.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the About Page " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjy-E3-on9">
+                                <rect key="frame" x="0.0" y="58" width="320" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-cX-5uw">
-                                <rect key="frame" x="22" y="117.5" width="276" height="264"/>
-                                <string key="text">Welcome to the abouts page. The purpose of this app is to serve as a workout and gym guide to beginner and intermediate atheletes. We've found that too many people walk into a gym feeling overwhelmed by the number and the types of workouts. Going online they are thrown multitudes of different opinions. Here with Slacker, we offer a simple and straightforward gym guide that walks you through each exercise.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-cX-5uw">
+                                <rect key="frame" x="22" y="117.5" width="276" height="286.5"/>
+                                <string key="text">The purpose of this app is to serve as a workout and gym guide to beginner and intermediate atheletes. 
+
+We've found that too many people walk into a gym feeling overwhelmed by the number and the types of workouts. 
+
+Going online they are thrown multitudes of different opinions. 
+
+Here with Slacker, we offer a simple and straightforward gym guide that walks you through each exercise.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg5-0u-LYW">
-                                <rect key="frame" x="122" y="455" width="77" height="30"/>
+                                <rect key="frame" x="122" y="437" width="77" height="48"/>
                                 <state key="normal" title="Contact Us"/>
                                 <connections>
                                     <action selector="ContactPressed:" destination="hKD-DA-PIb" eventType="touchUpInside" id="cIG-Xd-v4e"/>
@@ -255,11 +261,12 @@
                         <constraints>
                             <constraint firstItem="l9Z-cX-5uw" firstAttribute="top" secondItem="Wjy-E3-on9" secondAttribute="bottom" constant="33" id="BvB-Zj-dmQ"/>
                             <constraint firstItem="pnU-X6-RZp" firstAttribute="trailing" secondItem="Dg5-0u-LYW" secondAttribute="trailing" constant="121" id="BvQ-P2-NMw"/>
+                            <constraint firstItem="pnU-X6-RZp" firstAttribute="trailing" secondItem="Wjy-E3-on9" secondAttribute="trailing" id="GOI-Bj-nXA"/>
+                            <constraint firstItem="Wjy-E3-on9" firstAttribute="leading" secondItem="qR2-nN-yz8" secondAttribute="leading" id="J19-mS-dlS"/>
                             <constraint firstItem="Dg5-0u-LYW" firstAttribute="leading" secondItem="pnU-X6-RZp" secondAttribute="leading" constant="122" id="NoD-CW-RwS"/>
                             <constraint firstItem="pnU-X6-RZp" firstAttribute="bottom" secondItem="Dg5-0u-LYW" secondAttribute="bottom" constant="34" id="afd-7b-234"/>
                             <constraint firstAttribute="trailing" secondItem="l9Z-cX-5uw" secondAttribute="trailing" constant="22" id="dQY-E1-eJF"/>
-                            <constraint firstItem="Wjy-E3-on9" firstAttribute="leading" secondItem="pnU-X6-RZp" secondAttribute="leading" constant="123" id="ijk-JH-EXL"/>
-                            <constraint firstItem="pnU-X6-RZp" firstAttribute="trailing" secondItem="Wjy-E3-on9" secondAttribute="trailing" constant="133.5" id="vXN-s6-uun"/>
+                            <constraint firstItem="Dg5-0u-LYW" firstAttribute="top" secondItem="l9Z-cX-5uw" secondAttribute="bottom" constant="33" id="taG-B0-F3N"/>
                             <constraint firstItem="Wjy-E3-on9" firstAttribute="top" secondItem="pnU-X6-RZp" secondAttribute="top" constant="38" id="yAJ-bd-C6v"/>
                             <constraint firstItem="l9Z-cX-5uw" firstAttribute="leading" secondItem="pnU-X6-RZp" secondAttribute="leading" constant="22" id="yxB-5S-PX4"/>
                         </constraints>
@@ -308,7 +315,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-UT-Qqe">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-UT-Qqe">
                                                             <rect key="frame" x="160" y="0.0" width="160" height="50.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
@@ -568,7 +575,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nm-Xi-lHl">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nm-Xi-lHl">
                                                             <rect key="frame" x="145" y="0.0" width="145" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
