@@ -79,6 +79,7 @@ class BreakViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        self.title = ""
         timerLabel.text = timeString(time: TimeInterval(restTime))
         runTimer()
         view.addBackground()

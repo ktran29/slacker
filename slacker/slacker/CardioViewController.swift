@@ -131,6 +131,7 @@ class CardioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        self.title = ""
         prepareViewController()
         view.addBackground("Running.jpg")
         //runTimer()  // Enable this to have the timer start onLoad

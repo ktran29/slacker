@@ -130,6 +130,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // separates workouts into groups
     func initializeAllWorkouts(_  jsonData:NSArray) {
         self.ALL_WORKOUTS = jsonData
+        
         for index in 0...self.ALL_WORKOUTS.count - 1 {
             let workout = ALL_WORKOUTS[index] as AnyObject
             let workoutTag = workout.value(forKey: "tag") as! String
