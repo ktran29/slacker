@@ -43,6 +43,7 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.dataSource = self
         self.tableView.rowHeight = 68
         self.tableView.separatorStyle = .none
+        self.title = "Stopwatch"
     }
     
     override func viewWillAppear(_ animated: Bool) {

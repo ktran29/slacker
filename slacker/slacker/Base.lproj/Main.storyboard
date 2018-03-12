@@ -22,7 +22,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Stopwatch-->
+        <!--Stopwatch View Controller-->
         <scene sceneID="4Xz-2H-tXg">
             <objects>
                 <viewController id="gBw-gn-1wC" customClass="StopwatchViewController" customModule="slacker" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,14 +34,14 @@
                                 <rect key="frame" x="0.0" y="327" width="0.0" height="12"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O3-p3-AZQ">
-                                <rect key="frame" x="0.0" y="162.5" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="171.5" width="320" height="30"/>
                                 <state key="normal" title="START"/>
                                 <connections>
                                     <action selector="startStopWatch:" destination="gBw-gn-1wC" eventType="touchUpInside" id="Rw1-M0-v3S"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-150" translatesAutoresizingMaskIntoConstraints="NO" id="R12-x3-KlU">
-                                <rect key="frame" x="0.0" y="75" width="320" height="20.5"/>
+                                <rect key="frame" x="0.0" y="84" width="320" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1g-c5-EZe">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="20.5"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-200" translatesAutoresizingMaskIntoConstraints="NO" id="o27-MO-6bY">
-                                <rect key="frame" x="0.0" y="120.5" width="320" height="12"/>
+                                <rect key="frame" x="0.0" y="129.5" width="320" height="12"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-yJ-ZbJ">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="12"/>
@@ -130,7 +130,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-A6-oaL">
-                                <rect key="frame" x="0.0" y="192.5" width="320" height="266.5"/>
+                                <rect key="frame" x="0.0" y="201.5" width="320" height="257.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stopwatchCell" id="jKr-eb-M8Y" customClass="StopwatchTableViewCell" customModule="slacker" customModuleProvider="target">
@@ -193,23 +193,17 @@
                             <constraint firstItem="1O3-p3-AZQ" firstAttribute="top" secondItem="o27-MO-6bY" secondAttribute="bottom" constant="30" id="PoN-VS-D07"/>
                             <constraint firstItem="BDg-A6-oaL" firstAttribute="leading" secondItem="Omo-eA-YAh" secondAttribute="leading" id="RgO-VC-d2G"/>
                             <constraint firstItem="BDg-A6-oaL" firstAttribute="trailing" secondItem="Omo-eA-YAh" secondAttribute="trailing" id="WCi-e8-Kzh"/>
-                            <constraint firstItem="R12-x3-KlU" firstAttribute="top" secondItem="phj-fW-PrT" secondAttribute="top" constant="75" id="ZNH-vZ-Wcs"/>
                             <constraint firstItem="BDg-A6-oaL" firstAttribute="leading" secondItem="44L-Ga-bOW" secondAttribute="leading" id="dJi-cE-jUi"/>
                             <constraint firstItem="C1m-aQ-Qhg" firstAttribute="trailing" secondItem="1O3-p3-AZQ" secondAttribute="trailing" id="ina-Os-z5G"/>
                             <constraint firstItem="o27-MO-6bY" firstAttribute="top" secondItem="R12-x3-KlU" secondAttribute="bottom" constant="25" id="pfh-nk-6b7"/>
                             <constraint firstItem="1O3-p3-AZQ" firstAttribute="leading" secondItem="C1m-aQ-Qhg" secondAttribute="leading" id="s7N-Bj-Xnn"/>
                             <constraint firstItem="C1m-aQ-Qhg" firstAttribute="trailing" secondItem="R12-x3-KlU" secondAttribute="trailing" id="vhU-1F-sCh"/>
+                            <constraint firstItem="R12-x3-KlU" firstAttribute="top" secondItem="C1m-aQ-Qhg" secondAttribute="top" constant="20" id="xEd-ch-OYH"/>
                             <constraint firstItem="Omo-eA-YAh" firstAttribute="top" secondItem="BDg-A6-oaL" secondAttribute="bottom" constant="10" id="ykZ-g9-b6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C1m-aQ-Qhg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stopwatch" image="001-stopwatch" landscapeImage="001-stopwatch" selectedImage="001-stopwatch" id="nHW-QO-Hot">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="i75-0S-qzk"/>
                     <connections>
                         <outlet property="lapMillisecondLabel" destination="ejn-vX-4fM" id="X50-qi-NUL"/>
                         <outlet property="lapMinuteLabel" destination="DKE-yJ-ZbJ" id="4UF-Yr-I5U"/>
@@ -226,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94O-lC-RrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1660" y="-2700"/>
+            <point key="canvasLocation" x="-1263.75" y="-2700"/>
         </scene>
         <!--About Scene-->
         <scene sceneID="qEv-x7-yJ4">
@@ -625,7 +619,7 @@
                     <connections>
                         <segue destination="tnY-i7-PSl" kind="relationship" relationship="viewControllers" id="XWe-zE-L2g"/>
                         <segue destination="eBM-cL-pWA" kind="relationship" relationship="viewControllers" id="yWN-Yx-JqB"/>
-                        <segue destination="gBw-gn-1wC" kind="relationship" relationship="viewControllers" id="nuw-sZ-CfN"/>
+                        <segue destination="LuG-31-b5j" kind="relationship" relationship="viewControllers" id="nuw-sZ-CfN"/>
                         <segue destination="hKD-DA-PIb" kind="relationship" relationship="viewControllers" id="wkK-wL-fqK"/>
                     </connections>
                 </tabBarController>
@@ -967,6 +961,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQA-5X-JQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4462" y="-1720"/>
+        </scene>
+        <!--Stopwatch-->
+        <scene sceneID="rff-5Z-PnL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LuG-31-b5j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="001-stopwatch" landscapeImage="001-stopwatch" selectedImage="001-stopwatch" id="nHW-QO-Hot">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iZc-gY-WhQ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gBw-gn-1wC" kind="relationship" relationship="rootViewController" id="BBl-6z-Ucc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qm-0g-EVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2597" y="-2733"/>
         </scene>
     </scenes>
     <resources>
