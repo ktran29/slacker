@@ -22,6 +22,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Favorites"
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = 68

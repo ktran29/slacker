@@ -536,20 +536,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZg-vx-EsW">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Favorites" id="c5d-en-Rzi">
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="5ec-vd-4FG">
-                                            <connections>
-                                                <action selector="editFavorites:" destination="SWe-TF-ahO" id="VN9-Lx-faz"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-fF-f3P">
-                                <rect key="frame" x="0.0" y="108" width="320" height="411"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="Z0d-CN-cRK" customClass="FavoriteTableViewCell" customModule="slacker" customModuleProvider="target">
@@ -594,17 +582,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dzF-fF-f3P" firstAttribute="top" secondItem="tZg-vx-EsW" secondAttribute="bottom" id="2ED-Xt-saQ"/>
                             <constraint firstItem="dzF-fF-f3P" firstAttribute="leading" secondItem="UQn-nN-So2" secondAttribute="leading" id="Ikc-Wj-ckS"/>
                             <constraint firstItem="UQn-nN-So2" firstAttribute="bottom" secondItem="dzF-fF-f3P" secondAttribute="bottom" id="O0A-bL-XBL"/>
                             <constraint firstItem="UQn-nN-So2" firstAttribute="trailing" secondItem="dzF-fF-f3P" secondAttribute="trailing" id="OoR-7l-VlH"/>
-                            <constraint firstItem="tZg-vx-EsW" firstAttribute="top" secondItem="UQn-nN-So2" secondAttribute="top" id="brW-LV-64i"/>
-                            <constraint firstItem="tZg-vx-EsW" firstAttribute="leading" secondItem="UQn-nN-So2" secondAttribute="leading" id="cAN-kb-kVI"/>
-                            <constraint firstItem="tZg-vx-EsW" firstAttribute="trailing" secondItem="UQn-nN-So2" secondAttribute="trailing" id="rp9-o0-Tau"/>
+                            <constraint firstItem="dzF-fF-f3P" firstAttribute="bottom" secondItem="UQn-nN-So2" secondAttribute="bottom" id="QQL-1U-T1x"/>
+                            <constraint firstItem="dzF-fF-f3P" firstAttribute="top" secondItem="UQn-nN-So2" secondAttribute="top" id="fQj-Bt-7rW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UQn-nN-So2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LqL-4M-0Cf"/>
+                    <navigationItem key="navigationItem" id="LqL-4M-0Cf">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="5ec-vd-4FG">
+                            <connections>
+                                <action selector="editFavorites:" destination="SWe-TF-ahO" id="VN9-Lx-faz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="editButton" destination="5ec-vd-4FG" id="uFC-JY-uCm"/>
                         <outlet property="tableView" destination="dzF-fF-f3P" id="SCl-HW-Caq"/>

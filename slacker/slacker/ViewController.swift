@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Workouts"
         self.tableView.separatorStyle = .none
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
